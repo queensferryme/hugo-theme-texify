@@ -1,0 +1,9 @@
+# Hugo output
+exampleSite/public
+public/
+
+# OS files
+desktop.ini
+thumbs.db
+$RECYCLE.BIN/
+.DS_Store
