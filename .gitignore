@@ -1,6 +1,6 @@
 # Hugo output
-exampleSite/public
 public/
+resources/
 
 # OS files
 desktop.ini
