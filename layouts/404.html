@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ .Site.Title }}</title>
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <div class="page_not_found">
+    <p>404 page not found</p>
+  </div>
+  {{ partial "footer.html" .}}
+</body>
+</html>
