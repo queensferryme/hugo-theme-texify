@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-{{ partial "head.html" . }}
+  {{ partial "head.html" . }}
 <body>
   {{ partial "header.html" . }}
-  {{ partial "main.html" . }}
+  <div class="homepage">
+    <h1>这个世界没那么好，但似乎也没那么糟。</h1>
+    <p>This is home page</p>
+    <a href="/posts/">posts</a>
+    <a href="/about/">about</a>
+  </div>
   {{ partial "footer.html" . }}
 </body>
 </html>

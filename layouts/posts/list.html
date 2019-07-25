@@ -3,8 +3,11 @@
   {{ partial "head.html" . }}
 <body>
   {{ partial "header.html" . }}
-  <div class="content">
-    {{ .Content }}
+  <div class="postslist">
+    <h1>posts list</h1>
+    {{ range .Data.Pages }}
+      <h2><a href={{ .Permalink }}>{{ .Title }}</a></h2>
+    {{ end }}
   </div>
   {{ partial "footer.html" . }}
 </body>
