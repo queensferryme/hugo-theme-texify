@@ -1,8 +1,0 @@
-baseURL = "http://example.com/"
-languageCode = "zh-cn"
-theme = "Cocodayo"
-title = "Cocodayo"
-
-contentDir = "exampleSite/content"
-staticDir = "exampleSite/static"
-themesDir = ".."
