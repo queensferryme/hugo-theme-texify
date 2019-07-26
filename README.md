@@ -5,5 +5,5 @@ A hugo theme for personal blogging.
 ## Development
 
 ```bash
-hugo server --config="exampleSite/config.toml" --disableFastRender
+hugo server --config="exampleSite/config.yaml" --disableFastRender
 ```

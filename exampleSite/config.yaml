@@ -1,0 +1,37 @@
+# metadata configuration
+baseURL: https://example.com/
+defaultContentLanguage: zh-cn
+hasCJKLanguage: true
+languageCode: zh-cn
+theme: Cocodayo
+title: ExampleSite
+
+# user configuration
+menu:
+  main:
+  - identifier: posts
+    name: Posts
+    url: /posts/
+    weight: 1
+  - identifier: archive
+    name: Archive
+    url: /archive/
+    weight: 2
+  - identifier: category
+    name: Category
+    url: /category/
+    weight: 3
+  - identifier: tag
+    name: Tag
+    url: /tags/
+    weight: 4
+  - identifier: about
+    name: About
+    url: /about/
+    weight: 5
+
+
+# develop configuration
+contentDir: exampleSite/content
+staticDir: exampleSite/static
+themesDir: ..
