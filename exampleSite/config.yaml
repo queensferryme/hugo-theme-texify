@@ -30,6 +30,8 @@ menu:
     url: /about/
     weight: 5
 
+params:
+  footer_slogan: "他们正热烈地讨论着别人的秘密，但是，一个不说，一个不听，还有一个不看。"
 
 # develop configuration
 contentDir: exampleSite/content
