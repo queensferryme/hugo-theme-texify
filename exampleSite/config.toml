@@ -1,0 +1,42 @@
+# develop configuration
+contentDir = "exampleSite/content"
+staticDir = "exampleSite/static"
+themesDir = ".."
+
+# site metadata
+baseURL = "https://example.com/"
+defaultContentLanguage = "zh-cn"
+hasCJKLanguage = true
+languageCode = "zh-cn"
+theme = "Cocodayo"
+title = "ExampleSite"
+
+# site navigation bar
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 1
+[[menu.main]]
+  identifier = "archive"
+  name = "Archive"
+  url = "/archive/"
+  weight = 2
+[[menu.main]]
+  identifier = "category"
+  name = "Category"
+  url = "/categories/"
+  weight = 3
+[[menu.main]]
+  identifier = "tag"
+  name = "Tag"
+  url = "/tags/"
+  weight = 4
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 5
+
+[params]
+  footer_slogan = "他们正热烈地讨论着别人的秘密，但是，一个不说，一个不听，还有一个不看。"
