@@ -19,7 +19,7 @@ menu:
     weight: 2
   - identifier: category
     name: Category
-    url: /category/
+    url: /categories/
     weight: 3
   - identifier: tag
     name: Tag
