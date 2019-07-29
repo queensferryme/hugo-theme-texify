@@ -6,7 +6,6 @@
   .post-categories span+span::before {
     content: "/ ";
   }
-
   .post-tags span+span::before {
     content: ", ";
   }
@@ -15,7 +14,7 @@
 <body>
   {{ partial "header.html" . }}
   <h1>Posts</h1>
-  <div id="posts-list">
+  <div id="post-list">
     {{ range .Data.Pages }}
     <div class="post-container">
       <h2 class="post-title">
