@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 {{ partial "head.html" . }}
+<style>
+  .homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .avatar img {
+    width: 20rem;
+    height: auto;
+  }
+
+  .icon {
+    height: 32px;
+    width: 32px;
+  }
+</style>
 
 <body>
   {{ partial "header.html" . }}
   <div class="homepage">
-    <h1>这个世界没那么好，但似乎也没那么糟。</h1>
-    <p>This is home page</p>
-    <a href="/posts/">posts</a>
-    <a href="/about/">about</a>
+    <h1>{{ .Site.Params.index_slogan }}</h1>
+    <div class="avatar">
+      <img src="{{ .Site.Params.avatar_url }}" alt="avatar">
+    </div>
+    <div class="social_link">
+      {{ range .Site.Params.social_link }}
+      <a href={{ .url }}>
+        <img class="icon" src={{ .icon }} alt={{ .name }}>
+      </a>
+      {{ end }}
+    </div>
   </div>
   {{ partial "footer.html" . }}
 </body>
