@@ -15,7 +15,9 @@
   {{ partial "header.html" . }}
   <h1>Posts</h1>
   <div id="post-list">
-    {{ range .Data.Pages }}
+    {{ $pages := where .Pages "Params.hidden" "!=" true }}
+    {{ $paginator := .Paginate (where $pages "Type" "==" "posts") }}
+    {{ range $paginator.Pages }}
     <div class="post-container">
       <h2 class="post-title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -51,6 +53,14 @@
       </div>
     </div>
     {{ end }}
+    <div class="post-list-pagination">
+      {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}">prev</a>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}">next</a>
+      {{ end }}
+    </div>
   </div>
   {{ partial "footer.html" . }}
 </body>
