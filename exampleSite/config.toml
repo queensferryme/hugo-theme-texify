@@ -8,6 +8,7 @@ baseURL = "https://example.com/"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 languageCode = "zh-cn"
+paginate = 10
 theme = "Cocodayo"
 title = "ExampleSite"
 

@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  {{ partial "head.html" . }}
+{{ partial "head.html" . }}
+
 <body>
   {{ partial "header.html" . }}
-  <div class="content">
-    {{ .Content }}
+  <div id="post-article">
+    <div class="post-toc">
+      {{ .TableOfContents }}
+    </div>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+    <div class="post-taxonomy-info">
+        <div class="post-categories">
+          <b>categories: </b>
+          {{ range .Params.categories }}
+          <span>{{ . }}</span>
+          {{ end }}
+        </div>
+        <div class="post-tags">
+          <b>tags: </b>
+          {{ range .Params.tags }}
+          <span>#{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+    <div class="post-prev-next">
+      {{ if .PrevInSection }}
+      <a href="{{ .PrevInSection.Permalink }}">prev</a>
+      {{ end }}
+      {{ if .NextInSection }}
+      <a href="{{ .NextInSection.Permalink }}">next</a>
+      {{ end }}
+    </div>
   </div>
   {{ partial "footer.html" . }}
 </body>
+
 </html>
