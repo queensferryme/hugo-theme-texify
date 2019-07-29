@@ -6,6 +6,7 @@
   .post-categories span+span::before {
     content: "/ ";
   }
+
   .post-tags span+span::before {
     content: ", ";
   }
@@ -13,53 +14,55 @@
 
 <body>
   {{ partial "header.html" . }}
-  <h1>Posts</h1>
-  <div id="post-list">
-    {{ $pages := where .Pages "Params.hidden" "!=" true }}
-    {{ $paginator := .Paginate (where $pages "Type" "==" "posts") }}
-    {{ range $paginator.Pages }}
-    <div class="post-container">
-      <h2 class="post-title">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </h2>
-      <div class="post-meta-info">
-        <span class="post-publish-date">
-          <b>publish: </b>{{ .PublishDate.Format "2006-01-02" }}
-        </span>
-        <span class="post-lastmod-date">
-          <b>last modified: </b>{{ .Lastmod.Format "2006-01-02" }}
-        </span>
-        <span class="post-word-count">
-          <b>word count: </b>{{ .WordCount }}
-        </span>
-        <span class="post-read-time">
-          <b>read time: </b>{{ .ReadingTime }} min
-        </span>
-      </div>
-      <div class="post-excerpt">{{ .Summary }}</div>
-      <div class="post-taxonomy-info">
-        <div class="post-categories">
-          <b>categories: </b>
-          {{ range .Params.categories }}
-          <span>{{ . }}</span>
-          {{ end }}
+  <div id="main" class="posts">
+    <h1>Posts</h1>
+    <div id="post-list">
+      {{ $pages := where .Pages "Params.hidden" "!=" true }}
+      {{ $paginator := .Paginate (where $pages "Type" "==" "posts") }}
+      {{ range $paginator.Pages }}
+      <div class="post-container">
+        <h2 class="post-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+        <div class="post-meta-info">
+          <span class="post-publish-date">
+            <b>publish: </b>{{ .PublishDate.Format "2006-01-02" }}
+          </span>
+          <span class="post-lastmod-date">
+            <b>last modified: </b>{{ .Lastmod.Format "2006-01-02" }}
+          </span>
+          <span class="post-word-count">
+            <b>word count: </b>{{ .WordCount }}
+          </span>
+          <span class="post-read-time">
+            <b>read time: </b>{{ .ReadingTime }} min
+          </span>
         </div>
-        <div class="post-tags">
-          <b>tags: </b>
-          {{ range .Params.tags }}
-          <span>#{{ . }}</span>
-          {{ end }}
+        <div class="post-excerpt">{{ .Summary }}</div>
+        <div class="post-taxonomy-info">
+          <div class="post-categories">
+            <b>categories: </b>
+            {{ range .Params.categories }}
+            <span>{{ . }}</span>
+            {{ end }}
+          </div>
+          <div class="post-tags">
+            <b>tags: </b>
+            {{ range .Params.tags }}
+            <span>#{{ . }}</span>
+            {{ end }}
+          </div>
         </div>
       </div>
-    </div>
-    {{ end }}
-    <div class="post-list-pagination">
-      {{ if $paginator.HasPrev }}
-      <a href="{{ $paginator.Prev.URL }}">prev</a>
       {{ end }}
-      {{ if $paginator.HasNext }}
-      <a href="{{ $paginator.Next.URL }}">next</a>
-      {{ end }}
+      <div class="post-list-pagination">
+        {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}">prev</a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}">next</a>
+        {{ end }}
+      </div>
     </div>
   </div>
   {{ partial "footer.html" . }}
