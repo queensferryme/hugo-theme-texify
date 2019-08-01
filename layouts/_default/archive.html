@@ -5,7 +5,24 @@
 <body>
   {{ partial "header.html" . }}
   <div id="main" class="archive">
-    archive
+    <h1>Archive</h1>
+    <div class="archive-list">
+      {{ $pages := where (where .Site.RegularPages "Params.hidden" "!=" true) "Type" "==" "posts" }}
+      <!-- {{ $pages }} -->
+      {{ range $pages.GroupByDate "2006" }}
+      <div class="list-grouped-by-year">
+        <h2>{{ .Key }}</h2>
+        <div class="post-grouped-by-year">
+          {{ range .Pages }}
+          <div class="post-item">
+            <a href={{ .RelPermalink }}>{{ .Title }}</a>
+            <span class="post-publish-date">{{ .PublishDate.Format "01-02" }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
   </div>
   {{ partial "footer.html" . }}
 </body>
