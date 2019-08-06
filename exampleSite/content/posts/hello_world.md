@@ -2,6 +2,9 @@
 title: "Hello World"
 date: 2018-01-01T22:28:38+08:00
 draft: false
+tags:
+  - tag1
+  - tag2
 ---
 
 Welcome to Cocodayo!

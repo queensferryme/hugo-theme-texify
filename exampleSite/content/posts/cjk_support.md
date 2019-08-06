@@ -2,6 +2,9 @@
 title: "CJK Language Support"
 date: 2019-07-25T23:10:30+08:00
 draft: false
+tags:
+  - tag1
+  - tag3
 ---
 
 当你决定了要向前迈进的那一刻, 你就已经踏出前进的一步了。
