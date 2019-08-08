@@ -4,15 +4,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- author -->
-  <meta name="author" content={{ .Site.Author.name }}>
+  <meta name="author" content="{{ .Site.Author.name }}">
 
   <!-- description -->
   {{ if .Description }}
-  <meta name="description" content={{ .Description }}>
+  <meta name="description" content="{{ .Description }}">
   {{ else if and .IsPage .Summary }}
-  <meta name="description" content={{ .Summary }}>
+  <meta name="description" content="{{ .Summary }}">
   {{ else }}
-  <meta name="description" content={{ .Site.Params.description }}>
+  <meta name="description" content="{{ .Site.Params.description }}">
   {{ end }}
 
   <!-- keywords -->
@@ -25,15 +25,20 @@
   <!-- favicon -->
 
   <!-- permalink -->
-  <link rel="canonical" href={{ .Permalink }}>
+  <link rel="canonical" href="{{ .Permalink }}">
 
   <!-- static files -->
-  <link rel="stylesheet" href={{ "css/Cocodayo.css" | absURL }}>
+  <link rel="stylesheet" href='{{ "css/Cocodayo.css" | absURL }}'>
 
   <!-- site title -->
   {{ if .IsHome }}
   <title>{{ .Site.Title }}</title>
   {{ else }}
   <title>{{ .Title }} - {{ .Site.Title }}</title>
+  {{ end }}
+
+  <!-- mathjax -->
+  {{ if .Site.Params.enable_mathjax }}
+    {{ partial "mathjax.html" . }}
   {{ end }}
 </head>
