@@ -43,6 +43,7 @@ name = "Cocodayo"
   weight = 5
 
 [params]
+  enable_mathjax = true
   footer_slogan = "<b>他们正热烈地讨论着别人的秘密，但是，一个不说，一个不听，还有一个不看。</b>"
   avatar_url = "https://i.loli.net/2019/07/28/5d3d4b6b925be18865.jpg"
   index_slogan = "<h1 style=\"color: pink;\">这个世界没那么好，但似乎也没那么糟。</h1>"
