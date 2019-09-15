@@ -1,25 +1,15 @@
-<style type="text/css">
-  #header .nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-</style>
-
 <header id="header">
-  <div class="title">
-    <h1>
-      <a href="{{ .Site.BaseURL }}">
-        <span>{{ .Site.Title }}</span>
-      </a>
-    </h1>
-  </div>
+  <h1 class="title">
+    <a href="{{ .Site.BaseURL }}">
+      <span>{{ .Site.Title }}</span>
+    </a>
+  </h1>
 
   <div class="nav-bar">
     {{ range .Site.Menus.main }}
-    <div class="nav-bar-item">
-      <a href="{{ .URL | safeURL }}">{{ .Name }}</a>
-    </div>
+    <span class="nav-bar-item">
+      <a class="link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+    </span>
     {{ end }}
   </div>
 </header>

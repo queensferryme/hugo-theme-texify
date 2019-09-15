@@ -27,20 +27,15 @@ name = "Cocodayo"
   url = "/archive/"
   weight = 2
 [[menu.main]]
-  identifier = "category"
-  name = "Category"
-  url = "/categories/"
-  weight = 3
-[[menu.main]]
   identifier = "tag"
   name = "Tag"
   url = "/tags/"
-  weight = 4
+  weight = 3
 [[menu.main]]
   identifier = "about"
   name = "About"
   url = "/about/"
-  weight = 5
+  weight = 4
 
 [params]
   enable_mathjax = true

@@ -21,21 +21,23 @@
 </style>
 
 <body>
-  {{ partial "header.html" . }}
-  <div id="main" class="index">
-    {{ .Site.Params.index_slogan | safeHTML }}
-    <div class="avatar">
-      <img src="{{ .Site.Params.avatar_url }}" alt="avatar">
+  <div id="wrapper">
+    {{ partial "header.html" . }}
+    <div id="main" class="index">
+      {{ .Site.Params.index_slogan | safeHTML }}
+      <div class="avatar">
+        <img src="{{ .Site.Params.avatar_url }}" alt="avatar">
+      </div>
+      <div class="social_link">
+        {{ range .Site.Params.social_link }}
+        <a href={{ .url }}>
+          <img class="icon" src={{ .icon }} alt={{ .name }}>
+        </a>
+        {{ end }}
+      </div>
     </div>
-    <div class="social_link">
-      {{ range .Site.Params.social_link }}
-      <a href={{ .url }}>
-        <img class="icon" src={{ .icon }} alt={{ .name }}>
-      </a>
-      {{ end }}
-    </div>
+    {{ partial "footer.html" . }}
   </div>
-  {{ partial "footer.html" . }}
 </body>
 
 </html>

@@ -3,15 +3,16 @@
 {{ partial "head.html" . }}
 
 <body>
-  {{ partial "header.html" . }}
-  <div id="main" class="post">
-    <div class="post-toc">
-      {{ .TableOfContents }}
-    </div>
-    <div class="post-content">
-      {{ .Content }}
-    </div>
-    <div class="post-taxonomy-info">
+  <div id="wrapper">
+    {{ partial "header.html" . }}
+    <div id="main" class="post">
+      <div class="post-toc">
+        {{ .TableOfContents }}
+      </div>
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+      <div class="post-taxonomy-info">
         <div class="post-categories">
           <b>categories: </b>
           {{ range .Params.categories }}
@@ -25,16 +26,17 @@
           {{ end }}
         </div>
       </div>
-    <div class="post-prev-next">
-      {{ if .PrevInSection }}
-      <a href="{{ .PrevInSection.Permalink }}">prev</a>
-      {{ end }}
-      {{ if .NextInSection }}
-      <a href="{{ .NextInSection.Permalink }}">next</a>
-      {{ end }}
+      <div class="post-prev-next">
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevInSection.Permalink }}">prev</a>
+        {{ end }}
+        {{ if .NextInSection }}
+        <a href="{{ .NextInSection.Permalink }}">next</a>
+        {{ end }}
+      </div>
     </div>
+    {{ partial "footer.html" . }}
   </div>
-  {{ partial "footer.html" . }}
 </body>
 
 </html>
