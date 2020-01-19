@@ -56,3 +56,21 @@ body {
   font-size: 1rem;
   margin-left: 1.5rem;
 }
+
+/* footer styles */
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: small;
+}
+
+#footer a {
+  color: #a6a6a6;
+  transition: all 0.2s linear;
+}
+
+#footer a:hover {
+  color: #263238;
+}
