@@ -1,4 +1,4 @@
-# Cocodayo
+# Verse
 
 A hugo theme for personal blogging.
 

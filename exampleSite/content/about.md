@@ -5,4 +5,4 @@ draft: false
 layout: "about"
 ---
 
-Welcome to [Cocodayo](https://github.com/queensferryme/hugo-theme-cocodayo), a hugo theme designed for personal blogging.
+Welcome to [Verse](hhttps://github.com/queensferryme/hugo-theme-verse), a hugo theme designed for personal blogging.

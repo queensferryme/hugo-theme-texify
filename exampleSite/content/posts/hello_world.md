@@ -7,7 +7,7 @@ tags:
   - tag2
 ---
 
-Welcome to Cocodayo!
+Welcome to Verse!
 
 # Header
 ## Header
@@ -27,7 +27,7 @@ Welcome to Cocodayo!
 
 ```python
 for _ in range(1000):
-    print('Hello World - Welcome to Cocodayo')
+    print('Hello World - Welcome to Verse')
 ```
 ### unordered list
 - first
@@ -62,4 +62,4 @@ for _ in range(1000):
 footnote[^1]
 
 ---
-[^1]: welcome to cocodayo
+[^1]: welcome to Verse

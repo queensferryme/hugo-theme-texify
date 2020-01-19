@@ -9,11 +9,11 @@ defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 languageCode = "zh-cn"
 paginate = 10
-theme = "Cocodayo"
+theme = "Verse"
 title = "ExampleSite"
 
 [author]
-name = "Cocodayo"
+name = "Verse"
 
 # site navigation bar
 [[menu.main]]
@@ -42,8 +42,8 @@ name = "Cocodayo"
   footer_slogan = "<b>他们正热烈地讨论着别人的秘密，但是，一个不说，一个不听，还有一个不看。</b>"
   avatar_url = "https://i.loli.net/2019/07/28/5d3d4b6b925be18865.jpg"
   index_slogan = "<h1 style=\"color: pink;\">这个世界没那么好，但似乎也没那么糟。</h1>"
-  description = "example site of hugo blog using theme Cocodayo"
-  keywords = ["hugo", "theme", "Cocodayo"]
+  description = "example site of hugo blog using theme Verse"
+  keywords = ["hugo", "theme", "Verse"]
 
 [[params.social_link]]
   name = "github"
