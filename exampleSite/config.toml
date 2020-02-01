@@ -8,12 +8,12 @@ baseURL = "https://example.com/"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 languageCode = "zh-cn"
-paginate = 10
-theme = "Verse"
-title = "ExampleSite"
+paginate = 5
+theme = "hugo-theme-verse"
+title = "Verse"
 
 [author]
-name = "Verse"
+name = "<author>"
 
 # site navigation bar
 [[menu.main]]
@@ -27,8 +27,8 @@ name = "Verse"
   url = "/archive/"
   weight = 2
 [[menu.main]]
-  identifier = "tag"
-  name = "Tag"
+  identifier = "tags"
+  name = "Tags"
   url = "/tags/"
   weight = 3
 [[menu.main]]
