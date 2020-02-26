@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 {{ partial "head.html" . }}
-<style>
-  .index {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .avatar img {
-    width: 20rem;
-    height: auto;
-  }
-
-  .icon {
-    height: 32px;
-    width: 32px;
-  }
-</style>
+<link rel="stylesheet" href='{{ "css/index.css" | absURL }}'>
 
 <body>
   <div id="wrapper">
     {{ partial "header.html" . }}
     <div id="main" class="index">
-      {{ .Site.Params.index_slogan | safeHTML }}
       <div class="avatar">
-        <img src="{{ .Site.Params.avatar_url }}" alt="avatar">
+        <img class='{{ cond .Site.Params.avatar_round "round" ""}}' src="{{ .Site.Params.avatar_url }}" alt="avatar">
       </div>
-      <div class="social_link">
+      <div class="slogan">{{ .Site.Params.slogan | safeHTML }}</div>
+      <div class="social-links">
         {{ range .Site.Params.social_link }}
-        <a href={{ .url }}>
-          <img class="icon" src={{ .icon }} alt={{ .name }}>
+        <a href="{{ .url }}" alt="{{ .name }}"
+          style="mask-image: url({{ .icon }}); -webkit-mask-image: url({{ .icon }})">
         </a>
         {{ end }}
       </div>

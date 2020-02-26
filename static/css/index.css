@@ -1,0 +1,35 @@
+.index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.avatar > img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.avatar > img.round {
+  border-radius: 100%;
+  border: #BFBDC1 .3rem solid;
+}
+
+.slogan {
+  margin: .5rem 0 1rem 0;
+  text-align: center;
+}
+
+.social-links > a {
+  background-color: #222222;
+  display: inline-block;
+  height: 2rem;
+  margin: 0 .7rem;
+  transition: background-color .3s;
+  width: 2rem;
+}
+
+.social-links > a:hover {
+  background-color: #84DCC6;
+}
+
