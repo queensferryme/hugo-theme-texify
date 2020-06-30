@@ -29,6 +29,8 @@
 
   <!-- static files -->
   <link rel="stylesheet" href='{{ "css/common.css" | absURL }}'>
+  <link rel="stylesheet" href='{{ "css/content.css" | absURL }}'>
+  <link rel="stylesheet" href='{{ "css/highlight.css" | absURL }}'>
 
   <!-- site title -->
   {{ if .IsHome }}
@@ -39,6 +41,6 @@
 
   <!-- mathjax -->
   {{ if .Site.Params.enable_mathjax }}
-    {{ partial "mathjax.html" . }}
+  {{ partial "mathjax.html" . }}
   {{ end }}
 </head>

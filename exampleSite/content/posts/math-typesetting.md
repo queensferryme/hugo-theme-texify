@@ -35,11 +35,10 @@ In this example we will be using [KaTeX](https://katex.org/)
 
 ### Examples
 
-Inline math: $$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
+Inline math: $ \varphi = \sum_iasdfasdfx_i\dfrac{1+\sqrt5}{2}= 1.6180339887… $
 
 Block math:
 
 $$
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
 $$
-

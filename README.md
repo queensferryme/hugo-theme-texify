@@ -1,4 +1,4 @@
-# Verse
+# TeXify
 
 A hugo theme for personal blogging.
 

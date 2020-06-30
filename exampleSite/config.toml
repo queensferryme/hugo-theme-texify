@@ -8,18 +8,26 @@ baseURL = "https://example.com/"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 languageCode = "zh-cn"
-paginate = 5
-theme = "hugo-theme-verse"
-title = "Verse"
+paginate = 3
+theme = "hugo-theme-texify"
+title = "TeXify"
+
+pygmentsUseClasses = true
 
 [author]
-name = "<author>"
+name = "author"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 # site navigation bar
 [[menu.main]]
   identifier = "posts"
   name = "Posts"
-  url = "/posts/"
+  url = "/"
   weight = 1
 [[menu.main]]
   identifier = "archive"
@@ -27,41 +35,13 @@ name = "<author>"
   url = "/archive/"
   weight = 2
 [[menu.main]]
-  identifier = "tags"
-  name = "Tags"
-  url = "/tags/"
-  weight = 3
-[[menu.main]]
   identifier = "about"
   name = "About"
   url = "/about/"
-  weight = 4
+  weight = 3
 
 [params]
-  avatar_round = true
-  avatar_url = "https://i.loli.net/2020/02/26/yne2OuofTMS9CWD.png"
-  description = "example site of hugo blog using theme Verse"
+  description = "example site of hugo blog using theme TeXify"
   enable_mathjax = true
-  footnote = ""
-  keywords = ["hugo", "theme", "Verse"]
-  slogan = "<b>Cogito, ergo sum</b>"
-
-[[params.social_link]]
-  name = "gmail"
-  url = "https://gmail.com"
-  icon = "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg"
-
-[[params.social_link]]
-  name = "github"
-  url = "https://github.com/"
-  icon = "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
-
-[[params.social_link]]
-  name = "telegram"
-  url = "https://telegram.org/"
-  icon = "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/telegram.svg"
-
-[[params.social_link]]
-  name = "twitter"
-  url = "https://twitter.com/"
-  icon = "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg"
+  footnote = "Follow me on <a class=link href=https://github.com/queensferryme>GitHub</a>, <a class=link href=https://twitter.com/queensferryme>Twitter</a> or <a class=link href=/index.xml>RSS</a>"
+  keywords = ["hugo", "theme", "TeXify"]

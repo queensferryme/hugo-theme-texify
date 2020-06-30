@@ -1,35 +1,27 @@
-.index {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+#main {
+    max-width: 768px;
 }
 
-.avatar > img {
-  height: 10rem;
-  width: 10rem;
+#main > .post + .post {
+    margin-top: 1rem;
 }
 
-.avatar > img.round {
-  border-radius: 100%;
-  border: #BFBDC1 .3rem solid;
+#main > .post > h2 {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: .5rem;
 }
 
-.slogan {
-  margin: .5rem 0 1rem 0;
-  text-align: center;
+#main > .post > h2 > time {
+    color: gray;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: normal;
+    min-width: 5rem;
 }
 
-.social-links > a {
-  background-color: #222222;
-  display: inline-block;
-  height: 2rem;
-  margin: 0 .7rem;
-  transition: background-color .3s;
-  width: 2rem;
+#main > .post > div {
+    margin-left: 2rem;
 }
-
-.social-links > a:hover {
-  background-color: #84DCC6;
-}
-

@@ -1,0 +1,23 @@
+#main {
+    max-width: 500px;
+}
+
+#main > .post-group > ul {
+    border-left: gray solid 1px;
+    list-style-type: none;
+    margin-left: 1rem;
+    padding: .5rem 0 .5rem 2rem;
+}
+
+#main > .post-group > ul > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 2;
+}
+
+#main > .post-group > ul > li > time {
+    color: gray;
+    min-width: 5rem;
+    text-align: right;
+}

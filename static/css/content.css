@@ -1,0 +1,83 @@
+.content a {
+    color: #AA0000;
+    text-decoration: underline;
+}
+
+.content a.footnote-ref::before {
+    content: "[";
+}
+
+.content a.footnote-ref::after {
+    content: "]";
+}
+
+.content blockquote {
+    border-left: black 2px solid;
+    font-style: italic;
+    padding: 1px 2rem;
+}
+
+.content code {
+    background-color: #F5F5F5;
+    border-radius: .2rem;
+    color: #AA0000;
+    font-family: 'Latin Modern Mono', Courier, monospace;
+    padding: 0 .2rem;
+}
+
+.content h1, .content h2, .content h3,
+.content h4, .content h5, .content h6 {
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.content h1 {
+    font-size: 2.4rem;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+}
+
+.content h3 {
+    font-size: 1.4rem;
+}
+
+.content h4 {
+    font-size: 1.2rem;
+}
+
+.content h5 {
+    font-size: 1.1rem;
+}
+
+.content h6 {
+    font-size: 1rem;
+}
+
+.content p {
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.content pre {
+    background-color: #F5F5F5;
+    border-radius: .2rem;
+    font-family: 'Latin Modern Mono', Courier, monospace;
+    overflow-x: auto;
+    padding: .5rem;
+}
+
+.content td, .content th {
+    border: #575c61 1px solid;
+    padding: .1rem .5rem;
+}
+
+.content th {
+    background-color: #575C61;
+    color: #FAFAFA;
+}
+
+.content ol, .content ul {
+    margin-left: 1.5rem;
+}
