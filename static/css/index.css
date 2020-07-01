@@ -7,11 +7,12 @@
 }
 
 #main > .post > h2 {
-    align-items: baseline;
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: .5rem;
+    text-align: justify;
 }
 
 #main > .post > h2 > time {
@@ -19,6 +20,7 @@
     display: inline-block;
     font-size: 1rem;
     font-weight: normal;
+    margin-left: 1rem;
     min-width: 5rem;
 }
 

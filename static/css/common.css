@@ -93,6 +93,7 @@ body {
 #header > h1 {
     font-size: 2.8rem;
     margin: 1.1rem 0;
+    text-align: center;
 }
 
 #header > nav {
@@ -135,3 +136,8 @@ body {
     flex-direction: column;
     margin-bottom: .5rem;
 }
+
+#footer .footnote {
+    text-align: center;
+}
+

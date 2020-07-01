@@ -1,5 +1,5 @@
 #main {
-    max-width: 500px;
+    max-width: 600px;
 }
 
 #main > .post-group > ul {
@@ -10,6 +10,7 @@
 }
 
 #main > .post-group > ul > li {
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,6 +19,7 @@
 
 #main > .post-group > ul > li > time {
     color: gray;
+    margin-left: 1rem;
     min-width: 5rem;
     text-align: right;
 }

@@ -43,6 +43,7 @@ name = "author"
   weight = 3
 
 [params]
+  custom_css = ["custom.css"]
   description = "example site of hugo blog using theme TeXify"
   enable_mathjax = true
   footnote = "Follow me on <a class=link href=https://github.com/queensferryme>GitHub</a>, <a class=link href=https://twitter.com/queensferryme>Twitter</a> or <a class=link href=/index.xml>RSS</a>"
