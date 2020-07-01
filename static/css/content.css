@@ -72,6 +72,10 @@
     padding: .5rem;
 }
 
+.content pre code {
+    padding: 0;
+}
+
 .content td, .content th {
     border: #575c61 1px solid;
     padding: .1rem .5rem;
