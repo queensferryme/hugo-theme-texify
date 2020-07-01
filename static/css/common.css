@@ -82,6 +82,19 @@ body {
     text-decoration: underline;
 }
 
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #AAAAAA;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888888;
+}
+
 /* header */
 
 #header {
@@ -140,4 +153,3 @@ body {
 #footer .footnote {
     text-align: center;
 }
-
