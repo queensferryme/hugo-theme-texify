@@ -22,7 +22,10 @@
   <meta name="keywords" content="{{ range $key, $value := .Site.Params.keywords }} {{ $value }} {{ end }}">
   {{ end }}
 
-  <!-- favicon -->
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ .Summary }}" />
 
   <!-- permalink -->
   <link rel="canonical" href="{{ .Permalink }}">
@@ -48,6 +51,6 @@
   {{ end }}
 
   {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ . | absURL }}" />
+  <link rel="stylesheet" href="{{ . | absURL }}" />
   {{ end }}
 </head>
