@@ -12,6 +12,7 @@ paginate = 3
 theme = "hugo-theme-texify"
 title = "TeXify"
 
+disqusShortname = ""
 pygmentsUseClasses = true
 
 [author]
