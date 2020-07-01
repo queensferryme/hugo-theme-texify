@@ -39,6 +39,9 @@
   <title>{{ .Title }} - {{ .Site.Title }}</title>
   {{ end }}
 
+  <!-- google analytics -->
+  {{ template "_internal/google_analytics_async.html" . }}
+
   <!-- mathjax -->
   {{ if .Site.Params.enable_mathjax }}
   {{ partial "mathjax.html" . }}

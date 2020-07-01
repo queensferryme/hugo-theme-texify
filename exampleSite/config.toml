@@ -13,6 +13,7 @@ theme = "hugo-theme-texify"
 title = "TeXify"
 
 disqusShortname = ""
+googleAnalytics = ""
 pygmentsUseClasses = true
 
 [author]
