@@ -1,19 +1,29 @@
-<script type="text/javascript" async
-  src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({
-      CommonHTML: {
-        scale: '180%'
+<script>
+  // https://mathjax.github.io/MathJax-demos-web/convert-configuration/convert-configuration.html
+  window.MathJax = {
+    chtml: {
+      scale: 2
+    },
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      autoload: {
+        color: [],
+        colorV2: ['color']
       },
-      tex2jax: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
-        processEscapes: true,
-        processEnvironments: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        TeX: {
-          equationNumbers: { autoNumber: "AMS" },
-          extensions: ["AMSmath.js", "AMSsymbols.js"]
-        }
-      }
-    });
-  </script>
+      packages: { '[+]': ['noerrors'] }
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    loader: {
+      load: ['[tex]/noerrors']
+    }
+  };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
