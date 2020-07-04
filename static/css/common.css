@@ -82,7 +82,7 @@ a {
     display: flex;
     flex-direction: column;
     font-family: 'Latin Modern Roman', 'Times New Roman', serif;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .link {
