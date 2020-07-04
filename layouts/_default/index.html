@@ -4,40 +4,42 @@
 <link rel="stylesheet" href='{{ "css/index.css" | absURL }}'>
 
 <body>
-  {{ partial "header.html" . }}
-  <main id="main" class="index">
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "==" "posts") }}
-    {{ range $paginator.Pages }}
-    <div class="post">
-      <h2>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <time>{{ .PublishDate.Format "2006-01-02" }}</time>
-      </h2>
-      {{ if ne .Params.tags nil }}
-      <div>
-        <b>Keywords: </b>
-        {{ range .Params.tags }}
-        <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
+  <div id="wrapper">
+    {{ partial "header.html" . }}
+    <main id="main" class="index">
+      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "==" "posts") }}
+      {{ range $paginator.Pages }}
+      <div class="post">
+        <h2>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <time>{{ .PublishDate.Format "2006-01-02" }}</time>
+        </h2>
+        {{ if ne .Params.tags nil }}
+        <div>
+          <b>Keywords: </b>
+          {{ range .Params.tags }}
+          <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
+          {{ end }}
+        </div>
         {{ end }}
+        <div class="content">{{ .Summary }}</div>
       </div>
       {{ end }}
-      <div class="content">{{ .Summary }}</div>
-    </div>
-    {{ end }}
-    <div class="paginator">
-      {{ if $paginator.HasPrev }}
-      <a class="link" href="{{ $paginator.Prev.URL }}">← prev</a>
-      {{ else }}
-      <a></a>
-      {{ end }}
-      {{ if $paginator.HasNext }}
-      <a class="link" href="{{ $paginator.Next.URL }}">next →</a>
-      {{ else }}
-      <a></a>
-      {{ end }}
-    </div>
-  </main>
-  {{ partial "footer.html" . }}
+      <div class="paginator">
+        {{ if $paginator.HasPrev }}
+        <a class="link" href="{{ $paginator.Prev.URL }}">← prev</a>
+        {{ else }}
+        <a></a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+        <a class="link" href="{{ $paginator.Next.URL }}">next →</a>
+        {{ else }}
+        <a></a>
+        {{ end }}
+      </div>
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
 </body>
 
 </html>

@@ -4,45 +4,47 @@
 <link rel="stylesheet" href='{{ "css/single.css" | absURL }}'>
 
 <body>
-  {{ partial "header.html" . }}
-  <main id="main" class="post">
-    <!-- sections -->
-    {{ if ne .Section "posts" }}
-    <div class="content">
-      {{ .Content }}
-    </div>
-    {{ else }}
-    <!-- posts -->
-    <h1>{{ .Title }}</h1>
-    {{ if ne .Params.tags nil }}
-    <div>
-      <b>Keywords: </b>
-      {{ range .Params.tags }}
-      <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
-      {{ end }}
-    </div>
-    {{ end }}
-    <div class="content">
-      {{ .Content }}
-    </div>
-    <div class="paginator">
-      {{ if .PrevInSection }}
-      <a class="link" href="{{ .PrevInSection.Permalink }}">← prev</a>
+  <div id="wrapper">
+    {{ partial "header.html" . }}
+    <main id="main" class="post">
+      <!-- sections -->
+      {{ if ne .Section "posts" }}
+      <div class="content">
+        {{ .Content }}
+      </div>
       {{ else }}
-      <a></a>
+      <!-- posts -->
+      <h1>{{ .Title }}</h1>
+      {{ if ne .Params.tags nil }}
+      <div>
+        <b>Keywords: </b>
+        {{ range .Params.tags }}
+        <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
+        {{ end }}
+      </div>
       {{ end }}
-      {{ if .NextInSection }}
-      <a class="link" href="{{ .NextInSection.Permalink }}">next →</a>
-      {{ else }}
-      <a></a>
+      <div class="content">
+        {{ .Content }}
+      </div>
+      <div class="paginator">
+        {{ if .PrevInSection }}
+        <a class="link" href="{{ .PrevInSection.Permalink }}">← prev</a>
+        {{ else }}
+        <a></a>
+        {{ end }}
+        {{ if .NextInSection }}
+        <a class="link" href="{{ .NextInSection.Permalink }}">next →</a>
+        {{ else }}
+        <a></a>
+        {{ end }}
+      </div>
+      <div class="comment">
+        {{ template "_internal/disqus.html" . }}
+      </div>
       {{ end }}
-    </div>
-    <div class="comment">
-      {{ template "_internal/disqus.html" . }}
-    </div>
-    {{ end }}
-  </main>
-  {{ partial "footer.html" . }}
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
 </body>
 
 </html>
