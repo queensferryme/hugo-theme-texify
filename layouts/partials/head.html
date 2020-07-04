@@ -1,56 +1,47 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- author -->
-  <meta name="author" content="{{ .Site.Author.name }}">
+<!-- author -->
+<meta name="author" content="{{ .Site.Author.name }}">
 
-  <!-- description -->
-  {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
-  {{ else if and .IsPage .Summary }}
-  <meta name="description" content="{{ .Summary }}">
-  {{ else }}
-  <meta name="description" content="{{ .Site.Params.description }}">
-  {{ end }}
+<!-- description -->
+{{ if .Description }}
+<meta name="description" content="{{ .Description }}">
+{{ else if and .IsPage .Summary }}
+<meta name="description" content="{{ .Summary }}">
+{{ else }}
+<meta name="description" content="{{ .Site.Params.description }}">
+{{ end }}
 
-  <!-- keywords -->
-  {{ if .Keywords }}
-  <meta name="keywords" content="{{ range $key, $value := .Keywords }} {{ $value }} {{ end }}">
-  {{ else }}
-  <meta name="keywords" content="{{ range $key, $value := .Site.Params.keywords }} {{ $value }} {{ end }}">
-  {{ end }}
+<!-- keywords -->
+{{ if .Keywords }}
+<meta name="keywords" content="{{ range $key, $value := .Keywords }} {{ $value }} {{ end }}">
+{{ else }}
+<meta name="keywords" content="{{ range $key, $value := .Site.Params.keywords }} {{ $value }} {{ end }}">
+{{ end }}
 
-  <!-- twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{{ .Title }}" />
-  <meta name="twitter:description" content="{{ .Summary }}" />
+<!-- twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Summary }}" />
 
-  <!-- permalink -->
-  <link rel="canonical" href="{{ .Permalink }}">
+<!-- permalink -->
+<link rel="canonical" href="{{ .Permalink }}">
 
-  <!-- static files -->
-  <link rel="stylesheet" href='{{ "css/common.css" | absURL }}'>
-  <link rel="stylesheet" href='{{ "css/content.css" | absURL }}'>
-  <link rel="stylesheet" href='{{ "css/highlight.css" | absURL }}'>
+<!-- style -->
+<link media="screen" rel="stylesheet" href='{{ "css/common.css" | absURL }}'>
+<link media="screen" rel="stylesheet" href='{{ "css/content.css" | absURL }}'>
+<link media="screen" rel="stylesheet" href='{{ "css/highlight.css" | absURL }}'>
 
-  <!-- site title -->
-  {{ if .IsHome }}
-  <title>{{ .Site.Title }}</title>
-  {{ else }}
-  <title>{{ .Title }} - {{ .Site.Title }}</title>
-  {{ end }}
+<!-- site title -->
+{{ if .IsHome }}
+<title>{{ .Site.Title }}</title>
+{{ else }}
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ end }}
 
-  <!-- google analytics -->
-  {{ template "_internal/google_analytics_async.html" . }}
-
-  <!-- mathjax -->
-  {{ if .Site.Params.enable_mathjax }}
-  {{ partial "mathjax.html" . }}
-  {{ end }}
-
-  {{ range .Site.Params.custom_css }}
-  <link rel="stylesheet" href="{{ . | absURL }}" />
-  {{ end }}
-</head>
+<!-- mathjax -->
+{{ if .Site.Params.enable_mathjax }}
+{{ partial "mathjax.html" . }}
+{{ end }}

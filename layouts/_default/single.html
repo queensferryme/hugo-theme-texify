@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-{{ partial "head.html" . }}
-<link rel="stylesheet" href='{{ "css/single.css" | absURL }}'>
+
+<head>
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" href='{{ "css/single.css" | absURL }}'>
+</head>
 
 <body>
   <div id="wrapper">
@@ -45,6 +48,7 @@
     </main>
     {{ partial "footer.html" . }}
   </div>
+  {{ partial "foot.html" . }}
 </body>
 
 </html>

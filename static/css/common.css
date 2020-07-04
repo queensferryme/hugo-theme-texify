@@ -1,13 +1,15 @@
 /* fonts */
 
 @font-face {
-    font-family: 'Latin ModMono';
+    font-display: swap;
+    font-family: 'Latin Modern Mono';
     font-style: normal;
     font-weight: bold;
     src: url('../font/lmmono-bold.woff');
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Latin Modern Mono';
     font-style: italic;
     font-weight: bold;
@@ -15,6 +17,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Latin Modern Mono';
     font-style: italic;
     font-weight: normal;
@@ -22,6 +25,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Latin Modern Mono';
     font-style: normal;
     font-weight: normal;
@@ -29,6 +33,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Latin Modern Roman';
     font-style: normal;
     font-weight: bold;
@@ -36,6 +41,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Latin Modern Roman';
     font-style: italic;
     font-weight: bold;
@@ -43,6 +49,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Latin Modern Roman';
     font-style: italic;
     font-weight: normal;
@@ -50,6 +57,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Latin Modern Roman';
     font-style: normal;
     font-weight: normal;
