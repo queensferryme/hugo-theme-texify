@@ -11,12 +11,12 @@
     {{ partial "header.html" . }}
     <main id="main" class="post">
       <!-- sections -->
-      {{ if ne .Section "posts" }}
+      {{ if ne .Section "post" }}
       <div class="content">
         {{ .Content }}
       </div>
       {{ else }}
-      <!-- posts -->
+      <!-- post -->
       <h1>{{ .Title }}</h1>
       {{ if ne .Params.tags nil }}
       <div>

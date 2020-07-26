@@ -1,14 +1,8 @@
-# develop configuration
-contentDir = "exampleSite/content"
-staticDir = "exampleSite/static"
-themesDir = ".."
-
-# site metadata
 baseURL = "https://example.com/"
-defaultContentLanguage = "zh-cn"
+defaultContentLanguage = "en"
 hasCJKLanguage = true
-languageCode = "zh-cn"
-paginate = 3
+languageCode = "en"
+paginate = 4
 theme = "hugo-theme-texify"
 title = "TeXify"
 
@@ -25,16 +19,15 @@ name = "author"
     [markup.goldmark.renderer]
       unsafe = true
 
-# site navigation bar
 [[menu.main]]
-  identifier = "posts"
-  name = "Posts"
+  identifier = "post"
+  name = "Post"
   url = "/"
   weight = 1
 [[menu.main]]
-  identifier = "archive"
-  name = "Archive"
-  url = "/archive/"
+  identifier = "archives"
+  name = "Archives"
+  url = "/post/"
   weight = 2
 [[menu.main]]
   identifier = "about"
@@ -43,8 +36,8 @@ name = "author"
   weight = 3
 
 [params]
-  custom_css = ["custom.css"]
-  description = "example site of hugo blog using theme TeXify"
+  custom_css = []
+  description = "an example site for hugo theme TeXify"
   enable_mathjax = true
-  footnote = "Follow me on <a class=link href=https://github.com/queensferryme>GitHub</a>, <a class=link href=https://twitter.com/queensferryme>Twitter</a> or <a class=link href=/index.xml>RSS</a>"
-  keywords = ["hugo", "theme", "TeXify"]
+  footnote = "Follow me on <a class=link href=https://github.com/queensferryme>GitHub</a>, <a class=link href=https://twitter.com/queensferryme>Twitter</a> or <a class=link href=/index.xml>RSS</a><br><a class=link href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank rel=noopener>CC BY-NC-SA 4.0</a>"
+  keywords = ["hugo", "latex", "theme"]
