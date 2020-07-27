@@ -1,11 +1,7 @@
-#main {
-    max-width: 768px;
-}
-
 #main > h1 {
-    font-size: 2.6rem;
+    text-align: center;
 }
 
-#main > .content {
-    margin-top: 1.2rem;
+#main > div + .content {
+    padding-top: 1rem;
 }

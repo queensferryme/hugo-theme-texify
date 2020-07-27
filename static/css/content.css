@@ -1,3 +1,11 @@
+.content .MathJax {
+    overflow-x: auto;
+}
+
+.content :last-child {
+    margin-bottom: 0;
+}
+
 .content a {
     color: #AA0000;
     text-decoration: underline;
@@ -11,10 +19,26 @@
     content: "]";
 }
 
+.content blockquote,
+.content div,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content p,
+.content pre,
+.content ol,
+.content table,
+.content ul {
+    margin-bottom: 1rem;
+}
+
 .content blockquote {
     border-left: black 2px solid;
     font-style: italic;
-    padding: 1px 2rem;
+    padding: 1rem 0 1rem 2rem;
 }
 
 .content code {
@@ -28,7 +52,6 @@
 .content h1, .content h2, .content h3,
 .content h4, .content h5, .content h6 {
     line-height: 1.5;
-    margin: 1rem 0;
 }
 
 .content h1 {
@@ -60,7 +83,6 @@
 }
 
 .content p {
-    margin: 1rem 0;
     text-align: justify;
 }
 
@@ -75,6 +97,11 @@
 
 .content pre code {
     padding: 0;
+}
+
+.content table {
+    display: block;
+    overflow-x: auto;
 }
 
 .content td, .content th {

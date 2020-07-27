@@ -28,6 +28,7 @@
         <div class="content">{{ .Summary }}</div>
       </div>
       {{ end }}
+      {{ if or $paginator.HasPrev $paginator.HasNext}}
       <div class="paginator">
         {{ if $paginator.HasPrev }}
         <a class="link" href="{{ $paginator.Prev.URL }}">← prev</a>
@@ -40,6 +41,7 @@
         <a></a>
         {{ end }}
       </div>
+      {{ end }}
     </main>
     {{ partial "footer.html" . }}
   </div>
