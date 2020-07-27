@@ -1,6 +1,8 @@
 #main > .post-group > ul {
+    border-left: gray solid 1px;
     list-style-type: none;
-    padding-left: 2rem;
+    margin-left: .5rem;
+    padding-left: 1rem;
 }
 
 #main > .post-group > ul > li {
@@ -18,7 +20,7 @@
 
 @media screen and (min-width: 768px) {
     #main > .post-group > ul {
-        border-left: gray solid 1px;
         margin-left: 1rem;
+        padding-left: 2rem;
     }
 }

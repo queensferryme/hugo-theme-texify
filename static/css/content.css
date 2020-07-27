@@ -1,5 +1,6 @@
 .content .MathJax {
     overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .content :last-child {
