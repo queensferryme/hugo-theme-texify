@@ -1,27 +1,14 @@
 <script>
   // https://mathjax.github.io/MathJax-demos-web/convert-configuration/convert-configuration.html
   window.MathJax = {
-    chtml: {
-      scale: 2
-    },
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
       processEscapes: true,
       processEnvironments: true,
-      autoload: {
-        color: [],
-        colorV2: ['color']
-      },
-      packages: { '[+]': ['noerrors'] }
     },
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-      ignoreHtmlClass: 'tex2jax_ignore',
-      processHtmlClass: 'tex2jax_process'
-    },
-    loader: {
-      load: ['[tex]/noerrors']
     }
   };
 </script>

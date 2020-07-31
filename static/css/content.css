@@ -1,4 +1,5 @@
 .content .MathJax {
+    font-size: 100%!important;
     overflow-x: auto;
     overflow-y: hidden;
 }

@@ -107,6 +107,7 @@ time {
 }
 
 ::-webkit-scrollbar {
+    background-color: #FAFAFA;
     height: 8px;
     width: 8px;
 }
