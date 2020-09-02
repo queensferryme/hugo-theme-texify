@@ -40,3 +40,11 @@ hugo server \
     --disableFastRender \
     --themesDir=".."
 ```
+
+## Acknowledgement
+
+The design of this theme is inspired by the following softwares:
+
+- https://github.com/vincentdoerig/latex-css
+- https://github.com/7ma7X/HugoTeX
+- https://theme.typora.io/theme/Academic/
