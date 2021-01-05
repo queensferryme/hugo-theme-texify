@@ -9,8 +9,7 @@
 }
 
 .content a {
-    color: #AA0000;
-    text-decoration: underline;
+    color: #0000aa;
 }
 
 .content a.footnote-ref::before {
