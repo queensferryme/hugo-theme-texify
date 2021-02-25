@@ -21,18 +21,18 @@
 <meta name="keywords" content="{{ range $key, $value := .Site.Params.keywords }} {{ $value }} {{ end }}">
 {{ end }}
 
-<!-- twitter -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ .Title }}" />
-<meta name="twitter:description" content="{{ .Summary }}" />
+<!-- mathjax -->
+{{ if .Site.Params.enable_mathjax }}
+{{ partial "mathjax.html" . }}
+{{ end }}
 
 <!-- permalink -->
 <link rel="canonical" href="{{ .Permalink }}">
 
-<!-- style -->
-<link media="screen" rel="stylesheet" href='{{ "css/common.css" | absURL }}'>
-<link media="screen" rel="stylesheet" href='{{ "css/content.css" | absURL }}'>
-<link media="screen" rel="stylesheet" href='{{ "css/highlight.css" | absURL }}'>
+<!-- rss -->
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
 
 <!-- site title -->
 {{ if .IsHome }}
@@ -41,7 +41,13 @@
 <title>{{ .Title }} - {{ .Site.Title }}</title>
 {{ end }}
 
-<!-- mathjax -->
-{{ if .Site.Params.enable_mathjax }}
-{{ partial "mathjax.html" . }}
-{{ end }}
+<!-- style -->
+<link media="screen" rel="stylesheet" href='{{ "css/common.css" | absURL }}'>
+<link media="screen" rel="stylesheet" href='{{ "css/content.css" | absURL }}'>
+<link media="screen" rel="stylesheet" href='{{ "css/highlight.css" | absURL }}'>
+
+<!-- twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Summary }}" />
+
