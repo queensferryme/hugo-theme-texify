@@ -14,8 +14,17 @@ A minimal, latex-style hugo theme for personal blogging.
 
 ## Usage
 
+Install with:
+
 ```bash
-git clone https://github.com/queensferryme/hugo-theme-texify.git themes/hugo-theme-texify
+git submodule add https://github.com/queensferryme/hugo-theme-texify.git themes/hugo-theme-texify
+cp themes/hugo-theme-texify/exampleSite/config.toml config.toml
+```
+
+Upgrade with:
+
+```bash
+git submodule foreach git pull origin master
 ```
 
 See `exampleSite/config.toml` for an example configuration.
@@ -33,12 +42,7 @@ Note that for Simplified Chinese users, it is generally recommended to use [Noto
 ## Development
 
 ```bash
-hugo server \
-    --buildDrafts \
-    --config="exampleSite/config.toml" \
-    --contentDir="exampleSite/content" \
-    --disableFastRender \
-    --themesDir=".."
+make dev
 ```
 
 ## Acknowledgement
