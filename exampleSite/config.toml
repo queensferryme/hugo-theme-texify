@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://hugo-theme-texify.qufy.me"
 defaultContentLanguage = "en"
 hasCJKLanguage = true
 languageCode = "en"

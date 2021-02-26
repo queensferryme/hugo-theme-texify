@@ -1,0 +1,8 @@
+[build]
+publish = "public"
+command = "git clone https://github.com/queensferryme/hugo-theme-texify.git /opt/build/hugo-theme-texify && make build"
+
+[context.production.environment]
+HUGO_VERSION = "0.80.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
