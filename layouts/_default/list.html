@@ -19,7 +19,7 @@
           {{ range .Pages }}
           <li>
             <a class="link" href={{ .RelPermalink }}>{{ .Title }}</a>
-            <time>{{ .PublishDate.Format "2006-01-02" }}</time>
+            <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
           </li>
           {{ end }}
         </ul>

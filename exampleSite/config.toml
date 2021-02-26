@@ -2,7 +2,7 @@ baseURL = "https://example.com/"
 defaultContentLanguage = "en"
 hasCJKLanguage = true
 languageCode = "en"
-paginate = 4
+paginate = 5
 theme = "hugo-theme-texify"
 title = "TeXify"
 
@@ -37,6 +37,7 @@ name = "author"
 
 [params]
   customCSS = []
+  dateFormat = "2006-01-02"
   description = "an example site for hugo theme TeXify"
   enableFullRSS = true
   enableMathjax = true

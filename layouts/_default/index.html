@@ -15,7 +15,7 @@
       <div class="post">
         <h2>
           <a href="{{ .Permalink }}">{{ .Title }}</a>
-          <time>{{ .PublishDate.Format "2006-01-02" }}</time>
+          <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
         </h2>
         {{ if ne .Params.tags nil }}
         <div>
