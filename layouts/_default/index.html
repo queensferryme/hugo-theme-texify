@@ -25,7 +25,13 @@
           {{ end }}
         </div>
         {{ end }}
-        <div class="content">{{ .Summary }}</div>
+        <div class="content">
+          {{ if .Site.Params.enableHanEmph }}
+          {{ .Summary | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
+          {{ else }}
+          {{ .Summary }}
+          {{ end }}
+        </div>
       </div>
       {{ end }}
       {{ if or $paginator.HasPrev $paginator.HasNext}}

@@ -40,6 +40,7 @@ name = "author"
   dateFormat = "2006-01-02"
   description = "an example site for hugo theme TeXify"
   enableFullRSS = true
+  enableHanEmph = true
   enableMathjax = true
   favicon = "/favicon.ico"
   footnote = "Follow me on <a class=link href=https://github.com/queensferryme>GitHub</a>, <a class=link href=https://twitter.com/queensferryme>Twitter</a> or <a class=link href=/index.xml>RSS</a> | <a class=link href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank rel=noopener>CC BY-NC-SA 4.0</a>"

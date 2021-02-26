@@ -101,6 +101,14 @@
     padding: 0;
 }
 
+.content strong.chinese {
+    font-weight: normal;
+    text-emphasis-style: dot;
+    text-emphasis-position: under;
+    -webkit-text-emphasis-style: dot;
+    -webkit-text-emphasis-position: under;
+}
+
 .content table {
     display: block;
     overflow-x: auto;
