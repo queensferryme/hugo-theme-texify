@@ -18,7 +18,7 @@ Install with:
 
 ```bash
 git submodule add https://github.com/queensferryme/hugo-theme-texify.git themes/hugo-theme-texify
-cp themes/hugo-theme-texify/exampleSite/config.toml config.toml
+cp themes/hugo-theme-texify/config.toml config.toml
 ```
 
 Upgrade with:
@@ -27,7 +27,7 @@ Upgrade with:
 git submodule foreach git pull origin master
 ```
 
-See `exampleSite/config.toml` for an example configuration.
+See `config.toml` for an example configuration.
 
 Note that for Simplified Chinese users, it is generally recommended to use [Noto Serif SC](https://fonts.google.com/specimen/Noto+Serif+SC) via Google Fonts. For instance, put the following codes in your `static/css/custom.css`:
 

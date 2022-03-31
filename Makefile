@@ -17,4 +17,3 @@ dev:
 	--contentDir="exampleSite/content" \
 	--disableFastRender \
 	--themesDir=".."
-
