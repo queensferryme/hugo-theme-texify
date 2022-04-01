@@ -4,9 +4,10 @@
 ###################################################
 
 baseURL = "https://texify.qufy.me" # website root path
-disqusShortname = ""               # Disqus shortcode
+disqusShortname = ""               # disqus shortcode
+enableGitInfo = false              # retrieve last modified date from git commits
 enableRobotsTXT = true             # /robots.txt
-googleAnalytics = ""               # Google Analytics ID
+googleAnalytics = ""               # google analytics id
 hasCJKLanguage = true              # Chinese/Japanese/Korean
 languageCode = "en"                # content language
 paginate = 5                       # number of posts each page
@@ -73,6 +74,12 @@ toc = false               # whether to enable table of contents in posts
 [params.math]
 enable = true # whether to enable math typesetting
 use = "katex" # katex or mathjax
+
+[params.outdated]
+enable = true # whether to display warnings for outdated posts
+limit = 1000  # days between last modified time and outdated time
+# warning to be displayed
+warning = "⚠️ It has been <i>%d</i> days since the last update, the content of the article may be outdated."
 
 # https://utteranc.es
 [params.utterances]

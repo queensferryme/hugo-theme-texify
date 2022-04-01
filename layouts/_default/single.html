@@ -9,6 +9,12 @@
     {{ .Content }}
   </article>
   {{ else }}
+  {{ if .Site.Params.outdated.enable }}
+  {{ $days := div (sub now.Unix .Lastmod.Unix) 86400 }}
+  {{ if gt $days .Site.Params.outdated.limit }}
+  <div class="warning">{{ printf .Site.Params.outdated.warning $days | safeHTML }}</div>
+  {{ end }}
+  {{ end }}
   <h1>{{ .Title }}</h1>
   {{ if ne .Params.tags nil }}
   <div>

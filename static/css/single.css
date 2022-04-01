@@ -6,6 +6,14 @@
     padding-top: 1rem;
 }
 
+#main > .warning {
+    background-color: tomato;
+    color: white;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
 #main .toc {
     background-color: #EEEEEE;
     border: black 1px dashed;
