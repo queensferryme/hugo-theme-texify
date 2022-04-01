@@ -4,13 +4,11 @@
 
 {{ define "main" }}
 <main id="main" class="post">
-  <!-- sections -->
-  {{ if ne .Section "post" }}
+  {{ if ne .Section "post"}}
   <div class="content">
     {{ .Content }}
   </div>
   {{ else }}
-  <!-- post -->
   <h1>{{ .Title }}</h1>
   {{ if ne .Params.tags nil }}
   <div>

@@ -4,15 +4,14 @@
 
 {{ define "main" }}
 <main id="main" class="archive">
-  {{ $pages := cond (eq .Section "tags") .Data.Pages .Site.RegularPages }}
-  {{ $pages := where $pages "Type" "==" "post" }}
+  {{ $pages := where .Data.Pages "Type" "post" }}
   {{ range $pages.GroupByDate "2006-01" }}
   <div class="post-group">
     <h2>{{ dateFormat "January 2006" (printf "%s-01" .Key) }}</h2>
     <ul>
       {{ range .Pages }}
       <li>
-        <a class="link" href={{ .RelPermalink }}>{{ .Title }}</a>
+        <a class="link" href="{{ .RelPermalink }}">{{ .Title }}</a>
         <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
       </li>
       {{ end }}
