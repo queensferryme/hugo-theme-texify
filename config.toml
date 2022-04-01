@@ -71,6 +71,13 @@ enableHanEmph = true      # use dots to emphasize chinese texts, see https://zh.
 since = "2019"            # website created year
 toc = false               # whether to enable table of contents in posts
 
+# https://giscus.app
+[params.giscus]
+enable = true # whether to enable giscus
+# paste giscus' <script></script> configuration between the triple quotes
+script = """
+"""
+
 [params.math]
 enable = true # whether to enable math typesetting
 use = "katex" # katex or mathjax
@@ -83,8 +90,7 @@ warning = "⚠️ It has been <i>%d</i> days since the last update, the content 
 
 # https://utteranc.es
 [params.utterances]
-enable = false
-repo = ""
-issue_term = "pathname"
-label = "Comment"
-theme = "github-light"
+enable = false # whether to enable utterances
+# paste utterances' <script></script> configuration between the triple quotes
+script = """
+"""

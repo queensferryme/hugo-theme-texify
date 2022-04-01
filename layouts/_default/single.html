@@ -54,12 +54,13 @@
   <div class="comment">
     <!-- disqus -->
     {{ template "_internal/disqus.html" . }}
+    <!-- giscus -->
+    {{ if .Site.Params.giscus.enable }}
+      {{ .Site.Params.giscus.script | safeHTML }}
+    {{ end }}
     <!-- utterances -->
     {{ if .Site.Params.utterances.enable }}
-    <script src="https://utteranc.es/client.js" repo="{{ .Site.Params.utterances.repo }}"
-      issue-term="{{ .Site.Params.utterances.issue_term }}" label="{{ .Site.Params.utterances.label }}"
-      theme="{{ .Site.Params.utterances.theme }}" crossorigin="anonymous" async>
-      </script>
+      {{ .Site.Params.utterances.script | safeHTML }}
     {{ end }}
   </div>
   {{ end }}
