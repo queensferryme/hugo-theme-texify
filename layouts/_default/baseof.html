@@ -19,7 +19,7 @@
   {{ end }}
 
   <!-- favicon -->
-  <link rel="icon" href="{{ .Site.Params.favicon }}">
+  <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
 
   <!-- keywords -->
   {{ if .Keywords }}
@@ -71,6 +71,11 @@
   <!-- custom css -->
   {{ range .Site.Params.customCSS }}
   <link media="screen" rel="stylesheet" href="{{ . | absURL }}" />
+  {{ end }}
+
+  <!-- custom js -->
+  {{ range .Site.Params.customJS }}
+  <script src="{{ . | absURL }}"></script>
   {{ end }}
 
   <!-- google analytics -->
