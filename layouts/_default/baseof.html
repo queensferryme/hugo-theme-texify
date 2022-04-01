@@ -33,6 +33,9 @@
   {{ partial "math.html" . }}
   {{ end }}
 
+  <!-- opengraph -->
+  {{ template "_internal/opengraph.html" . }}
+
   <!-- permalink -->
   <link rel="canonical" href="{{ .Permalink }}">
 
@@ -41,6 +44,9 @@
   {{ printf `
   <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
+
+  <!-- schema -->
+  {{ template "_internal/schema.html" . }}
 
   <!-- style -->
   <link media="screen" rel="stylesheet" href='{{ "css/common.css" | absURL }}'>
@@ -54,9 +60,7 @@
   {{ end }}
 
   <!-- twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{{ .Title }}" />
-  <meta name="twitter:description" content="{{ .Summary }}" />
+  {{ template "_internal/twitter_cards.html" . }}
 
   {{ block "head" . }}{{ end }}
 </head>

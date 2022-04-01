@@ -43,9 +43,8 @@ name = "About"
 url = "/about/"
 weight = 3
 
-# https://gohugo.io/getting-started/configuration/#configure-minify
-[minify]
-minifyOutput = false # output asset minimization
+[taxonomies]
+series = "series" # a group of related posts, see https://gohugo.io/templates/internal/#open-graph
 
 
 ########################
