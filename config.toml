@@ -63,12 +63,15 @@ Follow me on <a class=link href=https://github.com/queensferryme>GitHub</a>,
 """ # notes in the website footer
 keywords = ["hugo", "latex", "theme"] # website keywords
 
-customCSS = [] # path to custom css files, relative to './static/css/'
-customJS = [] # path to custom js files, relative to './static/js/'
+customCSS = []            # path to custom css files, relative to './static/css/'
+customJS = []             # path to custom js files, relative to './static/js/'
 dateFormat = "2006-01-02" # date format, see https://gohugo.io/functions/format/
-enableFullRSS = true # rss full-text output
-enableHanEmph = true # use dots to emphasize chinese texts, see https://zh.wikipedia.org/wiki/%E7%9D%80%E9%87%8D%E5%8F%B7
-enableMathjax = true # enable mathjax for rendering math formulas
+enableFullRSS = true      # rss full-text output
+enableHanEmph = true      # use dots to emphasize chinese texts, see https://zh.wikipedia.org/wiki/%E7%9D%80%E9%87%8D%E5%8F%B7
+
+[params.math]
+enable = true # whether to enable math typesetting
+use = "katex" # katex or mathjax
 
 # https://utteranc.es
 [params.utterances]

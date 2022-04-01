@@ -28,9 +28,9 @@
   <meta name="keywords" content="{{ range $key, $value := .Site.Params.keywords }} {{ $value }} {{ end }}">
   {{ end }}
 
-  <!-- mathjax -->
-  {{ if .Site.Params.enableMathjax }}
-  {{ partial "mathjax.html" . }}
+  <!-- math -->
+  {{ if .Site.Params.math.enable }}
+  {{ partial "math.html" . }}
   {{ end }}
 
   <!-- permalink -->

@@ -4,6 +4,12 @@
     overflow-y: hidden;
 }
 
+.content .katex {
+    font-size: 100%!important;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 .content :last-child {
     margin-bottom: 0;
 }
