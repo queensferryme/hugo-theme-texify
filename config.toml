@@ -68,6 +68,7 @@ customJS = []             # path to custom js files, relative to ./static
 dateFormat = "2006-01-02" # date format, see https://gohugo.io/functions/format/
 enableFullRSS = true      # rss full-text output
 enableHanEmph = true      # use dots to emphasize chinese texts, see https://zh.wikipedia.org/wiki/%E7%9D%80%E9%87%8D%E5%8F%B7
+since = "2019"            # website created year
 toc = false               # whether to enable table of contents in posts
 
 [params.math]
