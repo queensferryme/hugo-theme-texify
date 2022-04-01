@@ -1,70 +1,55 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "head" }}
+<link rel="stylesheet" href='{{ "css/single.css" | absURL }}'>
+{{ end }}
 
-<head>
-  {{ partial "head.html" . }}
-  <link rel="stylesheet" href='{{ "css/single.css" | absURL }}'>
-</head>
-
-<body>
-  <div id="wrapper">
-    {{ partial "header.html" . }}
-    <main id="main" class="post">
-      <!-- sections -->
-      {{ if ne .Section "post" }}
-      <div class="content">
-        {{ .Content }}
-      </div>
-      {{ else }}
-      <!-- post -->
-      <h1>{{ .Title }}</h1>
-      {{ if ne .Params.tags nil }}
-      <div>
-        <b>Keywords: </b>
-        {{ range .Params.tags }}
-        <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
-        {{ end }}
-      </div>
-      {{ end }}
-      <div class="content">
-        {{ if .Site.Params.enableHanEmph }}
-        {{ .Content | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
-        {{ else }}
-        {{ .Content }}
-        {{ end }}
-      </div>
-      <div class="paginator">
-        {{ if .PrevInSection }}
-        <a class="link" href="{{ .PrevInSection.Permalink }}">← prev</a>
-        {{ else }}
-        <a></a>
-        {{ end }}
-        {{ if .NextInSection }}
-        <a class="link" href="{{ .NextInSection.Permalink }}">next →</a>
-        {{ else }}
-        <a></a>
-        {{ end }}
-      </div>
-      <div class="comment">
-        <!-- disqus -->
-        {{ template "_internal/disqus.html" . }}
-        <!-- utterances -->
-        {{ if .Site.Params.utterances.enable }}
-        <script src="https://utteranc.es/client.js"
-                repo="{{ .Site.Params.utterances.repo }}"
-                issue-term="{{ .Site.Params.utterances.issue_term }}"
-                label="{{ .Site.Params.utterances.label }}"
-                theme="{{ .Site.Params.utterances.theme }}"
-                crossorigin="anonymous"
-                async>
-        </script>
-        {{ end }}
-      </div>
-      {{ end }}
-    </main>
-    {{ partial "footer.html" . }}
+{{ define "main" }}
+<main id="main" class="post">
+  <!-- sections -->
+  {{ if ne .Section "post" }}
+  <div class="content">
+    {{ .Content }}
   </div>
-  {{ partial "foot.html" . }}
-</body>
-
-</html>
+  {{ else }}
+  <!-- post -->
+  <h1>{{ .Title }}</h1>
+  {{ if ne .Params.tags nil }}
+  <div>
+    <b>Keywords: </b>
+    {{ range .Params.tags }}
+    <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+  <div class="content">
+    {{ if .Site.Params.enableHanEmph }}
+    {{ .Content | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
+    {{ else }}
+    {{ .Content }}
+    {{ end }}
+  </div>
+  <div class="paginator">
+    {{ if .PrevInSection }}
+    <a class="link" href="{{ .PrevInSection.Permalink }}">← prev</a>
+    {{ else }}
+    <a></a>
+    {{ end }}
+    {{ if .NextInSection }}
+    <a class="link" href="{{ .NextInSection.Permalink }}">next →</a>
+    {{ else }}
+    <a></a>
+    {{ end }}
+  </div>
+  <div class="comment">
+    <!-- disqus -->
+    {{ template "_internal/disqus.html" . }}
+    <!-- utterances -->
+    {{ if .Site.Params.utterances.enable }}
+    <script src="https://utteranc.es/client.js" repo="{{ .Site.Params.utterances.repo }}"
+      issue-term="{{ .Site.Params.utterances.issue_term }}" label="{{ .Site.Params.utterances.label }}"
+      theme="{{ .Site.Params.utterances.theme }}" crossorigin="anonymous" async>
+      </script>
+    {{ end }}
+  </div>
+  {{ end }}
+</main>
+{{ end }}

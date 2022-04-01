@@ -1,57 +1,46 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "head" }}
+<link rel="stylesheet" href='{{ "css/index.css" | absURL }}'>
+{{ end }}
 
-<head>
-  {{ partial "head.html" . }}
-  <link rel="stylesheet" href='{{ "css/index.css" | absURL }}'>
-</head>
-
-<body>
-  <div id="wrapper">
-    {{ partial "header.html" . }}
-    <main id="main" class="index">
-      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "==" "post") }}
-      {{ range $paginator.Pages }}
-      <div class="post">
-        <h2>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-          <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
-        </h2>
-        {{ if ne .Params.tags nil }}
-        <div>
-          <b>Keywords: </b>
-          {{ range .Params.tags }}
-          <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
-          {{ end }}
-        </div>
-        {{ end }}
-        <div class="content">
-          {{ if .Site.Params.enableHanEmph }}
-          {{ .Summary | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
-          {{ else }}
-          {{ .Summary }}
-          {{ end }}
-        </div>
-      </div>
+{{ define "main" }}
+<main id="main" class="index">
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "==" "post") }}
+  {{ range $paginator.Pages }}
+  <div class="post">
+    <h2>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
+    </h2>
+    {{ if ne .Params.tags nil }}
+    <div>
+      <b>Keywords: </b>
+      {{ range .Params.tags }}
+      <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
       {{ end }}
-      {{ if or $paginator.HasPrev $paginator.HasNext}}
-      <div class="paginator">
-        {{ if $paginator.HasPrev }}
-        <a class="link" href="{{ $paginator.Prev.URL }}">← prev</a>
-        {{ else }}
-        <a></a>
-        {{ end }}
-        {{ if $paginator.HasNext }}
-        <a class="link" href="{{ $paginator.Next.URL }}">next →</a>
-        {{ else }}
-        <a></a>
-        {{ end }}
-      </div>
+    </div>
+    {{ end }}
+    <div class="content">
+      {{ if .Site.Params.enableHanEmph }}
+      {{ .Summary | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
+      {{ else }}
+      {{ .Summary }}
       {{ end }}
-    </main>
-    {{ partial "footer.html" . }}
+    </div>
   </div>
-  {{ partial "foot.html" . }}
-</body>
-
-</html>
+  {{ end }}
+  {{ if or $paginator.HasPrev $paginator.HasNext}}
+  <div class="paginator">
+    {{ if $paginator.HasPrev }}
+    <a class="link" href="{{ $paginator.Prev.URL }}">← prev</a>
+    {{ else }}
+    <a></a>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+    <a class="link" href="{{ $paginator.Next.URL }}">next →</a>
+    {{ else }}
+    <a></a>
+    {{ end }}
+  </div>
+  {{ end }}
+</main>
+{{ end }}

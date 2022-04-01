@@ -8,5 +8,5 @@ features = ["blog"]
 min_version = "0.60"
 
 [author]
-  name = "Queensferry"
-  homepage = "https://github.com/queensferryme/"
+name = "Queensferry"
+homepage = "https://github.com/queensferryme/"

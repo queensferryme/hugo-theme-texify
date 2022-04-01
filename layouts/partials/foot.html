@@ -1,7 +1,0 @@
-<!-- custom css -->
-{{ range .Site.Params.customCSS }}
-<link media="screen" rel="stylesheet" href="{{ . | absURL }}" />
-{{ end }}
-
-<!-- google analytics -->
-{{ template "_internal/google_analytics_async.html" . }}
