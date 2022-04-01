@@ -5,9 +5,9 @@
 {{ define "main" }}
 <main id="main" class="post">
   {{ if ne .Section "post"}}
-  <div class="content">
+  <article class="content">
     {{ .Content }}
-  </div>
+  </article>
   {{ else }}
   <h1>{{ .Title }}</h1>
   {{ if ne .Params.tags nil }}
@@ -18,13 +18,21 @@
     {{ end }}
   </div>
   {{ end }}
-  <div class="content">
+  {{ if or .Site.Params.toc .Params.toc }}
+  <details>
+    <summary>
+      <b>Table of Contents</b>
+    </summary>
+    <div class="toc">{{ .TableOfContents }}</div>
+  </details>
+  {{ end }}
+  <article class="content">
     {{ if .Site.Params.enableHanEmph }}
     {{ .Content | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
     {{ else }}
     {{ .Content }}
     {{ end }}
-  </div>
+  </article>
   <div class="paginator">
     {{ if .PrevInSection }}
     <a class="link" href="{{ .PrevInSection.Permalink }}">← prev</a>

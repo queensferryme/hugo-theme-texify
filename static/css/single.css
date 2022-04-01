@@ -2,6 +2,30 @@
     text-align: center;
 }
 
-#main > div + .content {
+#main > .content {
     padding-top: 1rem;
+}
+
+#main .toc {
+    background-color: #EEEEEE;
+    border: black 1px dashed;
+    display: inline-block;
+    margin: 1rem;
+    padding: .5rem 1rem;
+}
+
+#main .toc a:hover {
+    text-decoration: underline;
+}
+
+#main .toc li > ul {
+    margin-left: 1.5rem;
+}
+
+#main .toc ul {
+    list-style: none;
+}
+
+#main :target {
+    background-color: azure;
 }
