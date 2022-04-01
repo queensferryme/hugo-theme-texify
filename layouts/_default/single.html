@@ -33,7 +33,7 @@
   </details>
   {{ end }}
   <article class="content">
-    {{ if .Site.Params.enableHanEmph }}
+    {{ if .Site.Params.emphasisWithDots }}
     {{ .Content | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
     {{ else }}
     {{ .Content }}
