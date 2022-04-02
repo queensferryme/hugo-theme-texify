@@ -73,14 +73,14 @@ toc = false               # whether to enable table of contents in posts
 
 # https://giscus.app
 [params.giscus]
-enable = true # whether to enable giscus
+enable = false # whether to enable giscus
 # paste giscus' <script></script> configuration between the triple quotes
 script = """
 """
 
 [params.math]
-enable = true # whether to enable math typesetting
-use = "katex" # katex or mathjax
+enable = false # whether to enable math typesetting
+use = "katex"  # katex or mathjax
 
 [params.outdated]
 enable = true # whether to display warnings for outdated posts
