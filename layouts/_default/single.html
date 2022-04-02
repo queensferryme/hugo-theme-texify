@@ -24,7 +24,7 @@
     {{ end }}
   </div>
   {{ end }}
-  {{ if or .Site.Params.toc .Params.toc }}
+  {{ if cond (ne .Params.toc nil) .Params.toc .Site.Params.toc }}
   <details>
     <summary>
       <b>Table of Contents</b>
