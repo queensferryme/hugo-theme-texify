@@ -25,12 +25,14 @@
   </div>
   {{ end }}
   {{ if cond (ne .Params.toc nil) .Params.toc .Site.Params.toc }}
+  {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
   <details>
     <summary>
       <b>Table of Contents</b>
     </summary>
     <div class="toc">{{ .TableOfContents }}</div>
   </details>
+  {{ end }}
   {{ end }}
   <article class="content">
     {{ if .Site.Params.emphasisWithDots }}
