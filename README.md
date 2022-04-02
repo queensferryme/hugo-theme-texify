@@ -8,7 +8,7 @@ A minimal, latex-style hugo theme for personal blogging.
 
 - [Disqus](https://disqus.com/) & Google Analytics included
 - Responsive design for mobile devices
-- Customize the site with your own styles
+- Customize the site with your own stylesheets
 - Math equations powered by [KaTeX](https://katex.org/) or [MathJax](https://www.mathjax.org/)
 - Minimal CSS, No JavaScript, Blazing Fast!
 

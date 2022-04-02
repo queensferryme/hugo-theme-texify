@@ -83,8 +83,8 @@ enable = false # whether to enable math typesetting
 use = "katex"  # katex or mathjax
 
 [params.outdated]
-enable = true # whether to display warnings for outdated posts
-limit = 1000  # days between last modified time and outdated time
+enable = false # whether to display warnings for outdated posts
+limit = 1000   # days between last modified time and outdated time
 # warning to be displayed
 warning = "⚠️ It has been <i>%d</i> days since the last update, the content of the article may be outdated."
 
