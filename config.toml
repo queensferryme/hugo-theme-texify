@@ -44,8 +44,10 @@ name = "About"
 url = "/about/"
 weight = 3
 
+# https://gohugo.io/content-management/taxonomies#configure-taxonomies
 [taxonomies]
-series = "series" # a group of related posts, see https://gohugo.io/templates/internal/#open-graph
+series = "series" # see https://gohugo.io/templates/internal/#open-graph
+tags = "tags"
 
 
 ########################
