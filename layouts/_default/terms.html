@@ -1,0 +1,17 @@
+{{ define "head" }}
+<link rel="stylesheet" href='{{ "css/single.css" | absURL }}'>
+{{ end }}
+
+{{ define "main"}}
+<main id="main" class="tags">
+<div>
+<h1>Tags</h1>
+<br/>
+<center>
+   {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+   <a class="link" href="{{ "tags/" | relLangURL }}{{ $name | urlize }}">{{ $name | title }}</a>&nbsp; &nbsp;
+   {{ end }}
+</center>
+</div>
+</main>
+{{end }}
