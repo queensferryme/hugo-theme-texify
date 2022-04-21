@@ -1,8 +1,15 @@
 #main > .post-group > ul {
-    border-left: gray solid 1px;
     list-style-type: none;
     margin-left: .5rem;
     padding-left: 1rem;
+}
+
+body.light #main > .post-group > ul {
+    border-left: gray solid 1px;
+}
+
+body.dark #main > .post-group > ul {
+    border-left: gray solid 1px;
 }
 
 #main > .post-group > ul > li {

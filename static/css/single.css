@@ -7,20 +7,36 @@
 }
 
 #main > .warning {
-    background-color: brown;
-    color: white;
     font-size: 1.1rem;
     margin: 2rem 0;
     padding: 1rem 0;
     text-align: center;
 }
 
+body.light #main > .warning {
+    background-color: brown;
+    color: white;
+}
+
+body.dark #main > .warning {
+    background-color: brown;
+    color: white;
+}
+
 #main .toc {
-    background-color: #EEEEEE;
-    border: black 1px dashed;
     display: inline-block;
     margin: 1rem;
     padding: .5rem 1rem;
+}
+
+body.light #main .toc {
+    background-color: #EEEEEE;
+    border: black 1px dashed;
+}
+
+body.dark #main .toc {
+    background-color: #EEEEEE;
+    border: black 1px dashed;
 }
 
 #main .toc a:hover {
@@ -35,6 +51,10 @@
     list-style: none;
 }
 
-#main :target {
+body.light #main :target {
+    background-color: azure;
+}
+
+body.dark #main :target {
     background-color: azure;
 }

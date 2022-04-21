@@ -1,4 +1,10 @@
-# TeXify
+# Hugo TeX
+
+This project is forked from [TeXify](https://github.com/queensferryme/hugo-theme-texify).
+
+The original [README.md](https://github.com/queensferryme/hugo-theme-texify/blob/master/README.md) content is included below.
+
+----------
 
 A minimal, latex-style hugo theme for personal blogging.
 

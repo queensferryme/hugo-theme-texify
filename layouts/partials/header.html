@@ -9,5 +9,11 @@
       <a class="link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
     </span>
     {{ end }}
+    {{ if eq .Site.Params.mode "toggle" -}}
+    <span class="nav-bar-item">
+      <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+    </span>
+		<script src="{{ .Site.BaseURL }}static/js/themetoggle.js"></script>
+		{{ end }}
   </nav>
 </header>

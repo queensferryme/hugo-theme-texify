@@ -8,3 +8,6 @@ desktop.ini
 thumbs.db
 $RECYCLE.BIN/
 .DS_Store
+
+# Content from forked repo
+content_archive/

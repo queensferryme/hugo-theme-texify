@@ -15,8 +15,15 @@
 }
 
 .content a {
-    color: #AA0000;
     text-decoration: underline;
+}
+
+body.light .content > a {
+    color: #AA0000;
+}
+
+body.dark .content > a {
+    color: #AA0000;
 }
 
 .content a.footnote-ref::before {
@@ -44,17 +51,32 @@
 }
 
 .content blockquote {
-    border-left: black 2px solid;
     font-style: italic;
     padding: 1rem 0 1rem 2rem;
 }
 
+body.light .content blockquote {
+    border-left: black 2px solid;
+}
+
+body.dark .content blockquote {
+    border-left: black 2px solid;
+}
+
 .content code {
-    background-color: #F5F5F5;
     border-radius: .2rem;
-    color: #AA0000;
     font-family: 'Latin Modern Mono', Courier, monospace;
     padding: 0 .2rem;
+}
+
+body.light .content code {
+    background-color: #F5F5F5;
+    color: #AA0000;
+}
+
+body.dark .content code {
+    background-color: #F5F5F5;
+    color: #AA0000;
 }
 
 .content h1, .content h2, .content h3,
@@ -95,12 +117,19 @@
 }
 
 .content pre {
-    background-color: #F5F5F5!important;
     border-radius: .2rem;
     font-family: 'Latin Modern Mono', Courier, monospace;
     margin-top: .5rem;
     overflow-x: auto;
     padding: .5rem;
+}
+
+body.light .content pre {
+    background-color: #F5F5F5!important;
+}
+
+body.dark .content pre {
+    background-color: #F5F5F5!important;
 }
 
 .content pre code {
@@ -121,11 +150,23 @@
 }
 
 .content td, .content th {
-    border: #575C61 1px solid;
     padding: .1rem .5rem;
 }
 
-.content th {
+body.light .content td, body.light .content th {
+    border: #575C61 1px solid;
+}
+
+body.dark .content td, body.dark .content th {
+    border: #575C61 1px solid;
+}
+
+body.light .content th {
+    background-color: #575C61;
+    color: #FAFAFA;
+}
+
+body.dark .content th {
     background-color: #575C61;
     color: #FAFAFA;
 }

@@ -3,14 +3,15 @@
     <span>© {{ .Site.Params.since }}</span> - <span>{{ now.Format "2006"}}</span>
   </div>
 
+  <div class="footnote">
+    <span>{{ .Site.Params.footnote | safeHTML }}</span>
+  </div>
+
   <div>
     <span>Powered by </span>
     <a class="link" href="https://gohugo.io/">Hugo</a>
-    <span> 🍦 Theme </span>
+    <span> and the </span>
     <a class="link" href="https://github.com/queensferryme/hugo-theme-texify">TeXify</a>
-  </div>
-
-  <div class="footnote">
-    <span>{{ .Site.Params.footnote | safeHTML }}</span>
+    <span> theme. </span>
   </div>
 </footer>
