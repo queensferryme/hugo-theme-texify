@@ -23,7 +23,7 @@ body.light .content > a {
 }
 
 body.dark .content > a {
-    color: #AA0000;
+    color: #50fa7b;
 }
 
 .content a.footnote-ref::before {
@@ -60,7 +60,7 @@ body.light .content blockquote {
 }
 
 body.dark .content blockquote {
-    border-left: black 2px solid;
+    border-left: #afafaf 2px solid;
 }
 
 .content code {
@@ -75,8 +75,8 @@ body.light .content code {
 }
 
 body.dark .content code {
-    background-color: #F5F5F5;
-    color: #AA0000;
+    background-color: #25262a;
+    color: #50fa7b;
 }
 
 .content h1, .content h2, .content h3,
@@ -129,7 +129,7 @@ body.light .content pre {
 }
 
 body.dark .content pre {
-    background-color: #F5F5F5!important;
+    background-color: #25262a!important;
 }
 
 .content pre code {
@@ -158,7 +158,7 @@ body.light .content td, body.light .content th {
 }
 
 body.dark .content td, body.dark .content th {
-    border: #575C61 1px solid;
+    border: #c8c8c8 1px solid;
 }
 
 body.light .content th {
@@ -167,8 +167,8 @@ body.light .content th {
 }
 
 body.dark .content th {
-    background-color: #575C61;
-    color: #FAFAFA;
+    background-color: #F5F5F5;
+    color: #25262a;
 }
 
 .content ol, .content ul {

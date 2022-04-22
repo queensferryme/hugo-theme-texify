@@ -4,13 +4,17 @@
 
 {{ define "main" }}
 <main id="main" class="index">
-  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "==" "post") }}
-  {{ range $paginator.Pages }}
+  <p id="home-message">{{.Site.Params.homemessage | safeHTML }}</p>
+  {{ $projects := where .Site.Pages "Type" "project" }}
+  {{ if (lt 0 (len $projects))}}
+  <h2>Projects</h2>
+  {{ end }}
+  {{ range first 5 $projects }}
   <div class="post">
-    <h2>
+    <h3>
       <a href="{{ .Permalink }}">{{ .Title }}</a>
       <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
-    </h2>
+    </h3>
     {{ if ne .Params.tags nil }}
     <div>
       <b>Keywords: </b>
@@ -28,18 +32,31 @@
     </div>
   </div>
   {{ end }}
-  {{ if or $paginator.HasPrev $paginator.HasNext}}
-  <div class="paginator">
-    {{ if $paginator.HasPrev }}
-    <a class="link" href="{{ $paginator.Prev.URL }}">← prev</a>
-    {{ else }}
-    <a></a>
+  {{ $blogposts := where .Site.Pages "Type" "blog" }}
+  {{ if (lt 0 (len $blogposts))}}
+  <h2>Blog Posts</h2>
+  {{ end }}
+  {{ range first 5 $blogposts }}
+  <div class="post">
+    <h3>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
+    </h3>
+    {{ if ne .Params.tags nil }}
+    <div>
+      <b>Keywords: </b>
+      {{ range .Params.tags }}
+      <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
+      {{ end }}
+    </div>
     {{ end }}
-    {{ if $paginator.HasNext }}
-    <a class="link" href="{{ $paginator.Next.URL }}">next →</a>
-    {{ else }}
-    <a></a>
-    {{ end }}
+    <div class="content">
+      {{ if .Site.Params.emphasisWithDots }}
+      {{ .Summary | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
+      {{ else }}
+      {{ .Summary }}
+      {{ end }}
+    </div>
   </div>
   {{ end }}
 </main>

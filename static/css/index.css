@@ -1,15 +1,19 @@
-#main > .post + .post {
+#main > .post {
+    margin-top: 1.5rem;
+}
+
+#main > h2 {
     margin-top: 2rem;
 }
 
-#main > .post > h2 {
+#main > .post > h3 {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#main > .post > h2 > time {
+#main > .post > h3 > time {
     font-size: 1rem;
     font-weight: normal;
 }

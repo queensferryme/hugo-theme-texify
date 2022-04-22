@@ -4,7 +4,9 @@
 
 {{ define "main" }}
 <main id="main" class="archive">
-  {{ $pages := where .Data.Pages "Type" "post" }}
+  {{ $url := urls.Parse .Permalink }}
+  {{ $slug := substr $url.Path 1 (sub (len $url.Path) 2) }}
+  {{ $pages := where .Site.Pages "Type" $slug }}
   {{ range $pages.GroupByDate "2006-01" }}
   <div class="post-group">
     <h2>{{ dateFormat "January 2006" (printf "%s-01" .Key) }}</h2>
@@ -18,8 +20,14 @@
     </ul>
   </div>
   {{ end }}
+  {{ if (lt 0 (len $pages))}}
   <div class="post-group">
     <h2>...</h2>
   </div>
+  {{ else }}
+  <div class="post-group">
+    <p>{{.Site.Author.name}} hasn't posted any content here yet. Check back soon!</p>
+  </div>
+  {{ end }}
 </main>
 {{ end }}

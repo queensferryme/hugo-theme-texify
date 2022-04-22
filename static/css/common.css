@@ -87,7 +87,11 @@ body.light time {
 }
 
 body.dark time {
-    color: gray;
+    color: #b8b8b8;
+}
+
+body.dark {
+    color: #f5f5f5;
 }
 
 #wrapper {
@@ -104,7 +108,7 @@ body.light #wrapper {
 }
 
 body.dark #wrapper {
-    background-color: #FAFAFA;
+    background-color: #202124;
 }
 
 .link {
@@ -116,7 +120,7 @@ body.light .link {
 }
 
 body.dark .link {
-    color: #AA0000;
+    color: #50fa7b;
 }
 
 .paginator {
@@ -137,22 +141,14 @@ body.light ::-webkit-scrollbar {
 }
 
 body.dark ::-webkit-scrollbar {
-    background-color: #FAFAFA;
+    background-color: #202124;
 }
 
-body.light ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #AAAAAA;
 }
 
-body.dark ::-webkit-scrollbar-thumb {
-    background-color: #AAAAAA;
-}
-
-body.light ::-webkit-scrollbar-thumb:hover {
-    background-color: #888888;
-}
-
-body.dark ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: #888888;
 }
 
