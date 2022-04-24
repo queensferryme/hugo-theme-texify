@@ -7,6 +7,13 @@
   {{ $url := urls.Parse .Permalink }}
   {{ $slug := substr $url.Path 1 (sub (len $url.Path) 2) }}
   {{ $pages := where .Site.Pages "Type" $slug }}
+  {{ if (eq 0 (len $pages))}}
+  {{ $istag := eq (substr $slug 0 4) "tags" }}
+  {{ if $istag }}
+  {{ $slug = substr $slug 5 (sub (len $slug) 5) }}
+  {{ $pages = where .Site.Pages "Params.tags" "intersect" (split $slug " ") }}
+  {{ end }}
+  {{end}}
   {{ range $pages.GroupByDate "2006-01" }}
   <div class="post-group">
     <h2>{{ dateFormat "January 2006" (printf "%s-01" .Key) }}</h2>

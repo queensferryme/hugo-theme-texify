@@ -50,3 +50,42 @@ body.light #main :target {
 body.dark #main :target {
     background-color: #073b3b;
 }
+
+.author-info {
+    margin: .5em 0 .5em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.author-info > div {
+    max-width: 80%;
+    min-width: 300px;
+    padding: 0 2em 0 2em;
+}
+
+.author-info > div > h5 {
+    font-size: 1.2em;
+}
+
+.author-info > img {
+    max-width: 150px;
+    border-radius: 40px;
+}
+
+.content a {
+    text-decoration: underline;
+}
+
+body.light .content a {
+    color: #AA0000;
+}
+
+body.dark .content a {
+    color: #50fa7b;
+}
+
+.content > p {
+  margin-bottom: 1.8em;
+}

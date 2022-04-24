@@ -15,14 +15,6 @@
       <a href="{{ .Permalink }}">{{ .Title }}</a>
       <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
     </h3>
-    {{ if ne .Params.tags nil }}
-    <div>
-      <b>Keywords: </b>
-      {{ range .Params.tags }}
-      <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
-      {{ end }}
-    </div>
-    {{ end }}
     <div class="content">
       {{ if .Site.Params.emphasisWithDots }}
       {{ .Summary | replaceRE "<strong>(\\p{Han}+?)</strong>" "<strong class=chinese>$1</strong>" | safeHTML }}
@@ -31,6 +23,9 @@
       {{ end }}
     </div>
   </div>
+  {{ end }}
+  {{ if (lt 5 (len $projects))}}
+  <a class="link" href="/project/" style="margin-top: 0.8em;">More projects</a>
   {{ end }}
   {{ $blogposts := where .Site.Pages "Type" "blog" }}
   {{ if (lt 0 (len $blogposts))}}

@@ -1,6 +1,10 @@
 <footer id="footer">
   <div>
-    <span>© {{ .Site.Params.since }}</span> - <span>{{ now.Format "2006"}}</span>
+    <a class="link" id="dark-mode-toggle" onclick="toggleTheme()" href="">Toggle Dark Mode</a>
+  </div>
+  <script src="{{ .Site.BaseURL }}js/themetoggle.js"></script>
+  <div>
+    <span>© {{ .Site.Params.since }}</span> - <span>{{ now.Format "2006"}} {{.Site.Author.name}}</span>
   </div>
 
   <div class="footnote">
@@ -8,10 +12,10 @@
   </div>
 
   <div>
-    <span>Powered by </span>
+    <span>Powered by
     <a class="link" href="https://gohugo.io/">Hugo</a>
-    <span> and the </span>
+    and the
     <a class="link" href="https://github.com/queensferryme/hugo-theme-texify">TeXify</a>
-    <span> theme. </span>
+    theme. </span>
   </div>
 </footer>

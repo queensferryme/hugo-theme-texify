@@ -3,11 +3,11 @@ function setTheme(mode) {
   if (mode === "dark") {
     document.getElementsByTagName("body")[0].classList.add("dark")
     document.getElementsByTagName("body")[0].classList.remove("light")
-    document.getElementById("dark-mode-toggle").innerHTML = "Light";
+    document.getElementById("dark-mode-toggle").innerHTML = "Toggle Light Mode";
   } else if (mode === "light") {
     document.getElementsByTagName("body")[0].classList.add("light")
     document.getElementsByTagName("body")[0].classList.remove("dark")
-    document.getElementById("dark-mode-toggle").innerHTML = "Dark";
+    document.getElementById("dark-mode-toggle").innerHTML = "Toggle Dark Mode";
   }
 }
 
@@ -19,5 +19,11 @@ function toggleTheme() {
   }
 }
 
-var savedTheme = localStorage.getItem("theme-storage") || "light";
+var default_theme = "light";
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+if (prefersDarkScheme.matches) {
+  default_theme = "dark";
+}
+
+var savedTheme = localStorage.getItem("theme-storage") || default_theme;
 setTheme(savedTheme);
