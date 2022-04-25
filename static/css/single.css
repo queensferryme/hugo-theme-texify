@@ -21,12 +21,12 @@
     padding: .5rem 1rem;
 }
 
-body.light #main .toc {
+#wrapper.light #main .toc {
     background-color: #EEEEEE;
     border: black 1px dashed;
 }
 
-body.dark #main .toc {
+#wrapper.dark #main .toc {
     background-color: #25262a;
     border: #EEEEEE 1px dashed;
 }
@@ -43,11 +43,11 @@ body.dark #main .toc {
     list-style: none;
 }
 
-body.light #main :target {
+#wrapper.light #main :target {
     background-color: azure;
 }
 
-body.dark #main :target {
+#wrapper.dark #main :target {
     background-color: #073b3b;
 }
 
@@ -78,11 +78,11 @@ body.dark #main :target {
     text-decoration: underline;
 }
 
-body.light .content a {
+#wrapper.light .content a {
     color: #AA0000;
 }
 
-body.dark .content a {
+#wrapper.dark .content a {
     color: #50fa7b;
 }
 

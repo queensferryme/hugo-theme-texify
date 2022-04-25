@@ -1,12 +1,12 @@
 function setTheme(mode) {
   localStorage.setItem("theme-storage", mode);
   if (mode === "dark") {
-    document.getElementsByTagName("body")[0].classList.add("dark")
-    document.getElementsByTagName("body")[0].classList.remove("light")
+    document.getElementById("wrapper").classList.add("dark")
+    document.getElementById("wrapper").classList.remove("light")
     document.getElementById("dark-mode-toggle").innerHTML = "Toggle Light Mode";
   } else if (mode === "light") {
-    document.getElementsByTagName("body")[0].classList.add("light")
-    document.getElementsByTagName("body")[0].classList.remove("dark")
+    document.getElementById("wrapper").classList.add("light")
+    document.getElementById("wrapper").classList.remove("dark")
     document.getElementById("dark-mode-toggle").innerHTML = "Toggle Dark Mode";
   }
 }

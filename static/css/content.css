@@ -18,11 +18,11 @@
     text-decoration: underline;
 }
 
-body.light .content > a {
+#wrapper.light .content > a {
     color: #AA0000;
 }
 
-body.dark .content > a {
+#wrapper.dark .content > a {
     color: #50fa7b;
 }
 
@@ -55,11 +55,11 @@ body.dark .content > a {
     padding: 1rem 0 1rem 2rem;
 }
 
-body.light .content blockquote {
+#wrapper.light .content blockquote {
     border-left: black 2px solid;
 }
 
-body.dark .content blockquote {
+#wrapper.dark .content blockquote {
     border-left: #afafaf 2px solid;
 }
 
@@ -69,12 +69,12 @@ body.dark .content blockquote {
     padding: 0 .2rem;
 }
 
-body.light .content code {
+#wrapper.light .content code {
     background-color: #F5F5F5;
     color: #AA0000;
 }
 
-body.dark .content code {
+#wrapper.dark .content code {
     background-color: #25262a;
     color: #50fa7b;
 }
@@ -124,11 +124,11 @@ body.dark .content code {
     padding: .5rem;
 }
 
-body.light .content pre {
+#wrapper.light .content pre {
     background-color: #F5F5F5!important;
 }
 
-body.dark .content pre {
+#wrapper.dark .content pre {
     background-color: #25262a!important;
 }
 
@@ -153,20 +153,20 @@ body.dark .content pre {
     padding: .1rem .5rem;
 }
 
-body.light .content td, body.light .content th {
+#wrapper.light .content td, #wrapper.light .content th {
     border: #575C61 1px solid;
 }
 
-body.dark .content td, body.dark .content th {
+#wrapper.dark .content td, #wrapper.dark .content th {
     border: #c8c8c8 1px solid;
 }
 
-body.light .content th {
+#wrapper.light .content th {
     background-color: #575C61;
     color: #FAFAFA;
 }
 
-body.dark .content th {
+#wrapper.dark .content th {
     background-color: #F5F5F5;
     color: #25262a;
 }

@@ -82,15 +82,15 @@ time {
     min-width: 5rem;
 }
 
-body.light time {
+#wrapper.light time {
     color: gray;
 }
 
-body.dark time {
+#wrapper.dark time {
     color: #b8b8b8;
 }
 
-body.dark {
+#wrapper.dark {
     color: #f5f5f5;
 }
 
@@ -103,11 +103,11 @@ body.dark {
     word-break: break-word;
 }
 
-body.light #wrapper {
+#wrapper.light {
     background-color: #FAFAFA;
 }
 
-body.dark #wrapper {
+#wrapper.dark {
     background-color: #202124;
 }
 
@@ -115,11 +115,11 @@ body.dark #wrapper {
     text-decoration: underline;
 }
 
-body.light .link {
+#wrapper.light .link {
     color: #AA0000;
 }
 
-body.dark .link {
+#wrapper.dark .link {
     color: #50fa7b;
 }
 
@@ -136,11 +136,11 @@ body.dark .link {
     width: 8px;
 }
 
-body.light ::-webkit-scrollbar {
+#wrapper.light ::-webkit-scrollbar {
     background-color: #FAFAFA;
 }
 
-body.dark ::-webkit-scrollbar {
+#wrapper.dark ::-webkit-scrollbar {
     background-color: #202124;
 }
 
