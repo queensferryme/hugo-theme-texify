@@ -4,6 +4,9 @@
 <head>
 {{ partial "metadata.html" . }}
 {{ block "head" . }}{{ end }}
+{{ if or .Params.math .Site.Params.math.enable }}
+{{ partial "math.html" . }}
+{{ end }}
 </head>
 
 <body>
