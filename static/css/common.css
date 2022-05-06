@@ -89,8 +89,8 @@ time {
     flex-direction: column;
     font-family: 'Latin Modern Roman', 'Times New Roman', serif;
     min-height: 100vh;
+    overflow-wrap: break-word;
     padding: 1rem;
-    word-break: break-word;
 }
 
 .link {
