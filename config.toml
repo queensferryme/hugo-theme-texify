@@ -12,7 +12,6 @@ hasCJKLanguage = true                     # Chinese/Japanese/Korean
 languageCode = "en"                       # content language
 paginate = 5                              # number of posts each page
 rssLimit = 10                             # maximum items in rss feeds
-theme = "hugo-theme-texify"               # theme directory name
 title = "TeXify"                          # website title
 
 [author]
